@@ -1,6 +1,11 @@
 :root {
-  --main-color: #2c3a61;
-  --secondary-color: whitesmoke;
+  --main-color: #0c0c4c;
+  --secondary-color: #4242df;
+  --tertiary-color: whitesmoke;
+}
+#QwetuLogo {
+  font-size: 2rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 .navBarComponent {
   display: flex;
@@ -9,6 +14,10 @@
   padding: 1rem;
   background-color: var(--main-color);
   color: whitesmoke;
+}
+.navBarComponent div ul li {
+  display: flex;
+  align-items: center;
 }
 .navLinks {
   list-style: none;
@@ -22,4 +31,35 @@ a {
   margin: 5px;
   text-decoration: none;
   color: whitesmoke;
+  font-size: 18px;
+}
+.listingsHome {
+  height: 70vh;
+  background-image: linear-gradient(
+      rgba(24, 24, 141, 0.5),
+      rgba(24, 24, 141, 0.5)
+    ),
+    url("/src/Images/bgHome.jpg");
+}
+#landingPage h1,
+#landingPage h4 {
+  color: white;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+#landingPageContent {
+  margin: 12rem;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#landingCallToAction button {
+  width: 6rem;
+  padding: 9sspx;
+  background-color: var(--secondary-color);
+  margin: 7px;
+  color: whitesmoke;
+  border: none;
+  margin-top: 3rem;
 }
