@@ -1,0 +1,25 @@
+:root {
+  --main-color: #2c3a61;
+  --secondary-color: whitesmoke;
+}
+.navBarComponent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: var(--main-color);
+  color: whitesmoke;
+}
+.navLinks {
+  list-style: none;
+}
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+a {
+  margin: 5px;
+  text-decoration: none;
+  color: whitesmoke;
+}
