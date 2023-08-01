@@ -13,46 +13,37 @@ const Listing_Details = () => {
   const currentProperty = listingsData.find(
     (property) => property.externalID === externalID
   );
-  console.log(currentProperty);
+
   useEffect(() => {
     fetch(
       `https://bayut.p.rapidapi.com/properties/detail?externalID=${externalID}`,
       {
         method: "GET",
         headers: {
-          "X-RapidAPI-Key":
-            "47f6ed740fmsh71585dcfcf20c8bp1af58fjsnd4a08f796f4f",
+          "X-RapidAPI-Key": "YOUR_API_KEY", // Replace with your RapidAPI Key
           "X-RapidAPI-Host": "bayut.p.rapidapi.com",
         },
       }
     )
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setListingData(data);
-        // console.log(data.photos);
-        // const photosArray = data.photos;
-        // let imgURLArray = [];
-        // for (const imgItem of photosArray) {
-        //   imgURLArray.push(imgItem.url);
-        // }
-        // setImages(imgURLArray);
+        const photosArray = data.photos;
+        let imgURLArray = photosArray.map((imgItem) => imgItem.url);
+        setImages(imgURLArray);
+        setCurrentImage(imgURLArray[0]);
       });
-  }, [externalID]);
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setCount((prevCount) => (prevCount + 1) % images.length);
-  //   }, 4000);
+    const interval = setInterval(() => {
+      setCount((prevCount) => (prevCount + 1) % images.length);
+    }, 4000);
 
-  //   return () => clearInterval(interval);
-  // }, []);
+    return () => clearInterval(interval);
+  }, [externalID, images]);
 
-  // useEffect(() => {
-  //   setCurrentImage(images[count]);
-  // }, [count]);
-  // console.log(currentImage);
-  // console.log(`Images Count: ${images.length}`);
+  useEffect(() => {
+    setCurrentImage(images[count]);
+  }, [count, images]);
 
   return (
     <div className="listingDetailsContainer">
@@ -68,23 +59,18 @@ const Listing_Details = () => {
               <small> Loading ....</small>
             </div>
           ) : (
-            <img
-              src={currentProperty.coverPhoto.url}
-              class="card-img-top"
-            ></img>
+            <img src={currentImage} class="card-img-top" alt="Listing"></img>
           )}
           <div class="card-body">
             <h5 class="card-title">{currentProperty.title}</h5>
-            <p>baths:{currentProperty.baths}</p>
-            <p>sq.{currentProperty.area}</p>
+            <p>baths: {currentProperty.baths}</p>
+            <p>sq. {currentProperty.area}</p>
             <p>${currentProperty.price}</p>
-            <p>Purpose {currentProperty.purpose}</p>
+            <p>Purpose: {currentProperty.purpose}</p>
             <p>{currentProperty.description}</p>
             <p class="card-text">
               <small class="text-muted">{currentProperty.amenities}</small>
             </p>
-
-            {/* <p class="card-text">{description_l2}</p> */}
           </div>
         </div>
       </div>
