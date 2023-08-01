@@ -76,3 +76,20 @@ a {
   padding: 1rem;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
+.card {
+  width: 20rem;
+  margin: 20px;
+}
+.listingsContainer {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: auto;
+  width: 80%;
+}
+#listingsContainerTitle {
+  opacity: 0.9;
+  margin: 1rem;
+  color: black;
+}
