@@ -30,7 +30,6 @@ function Home() {
       </div>
     </div>
   ));
-
   return (
     <div>
       <h1 id="listingsContainerTitle">Explore</h1>
