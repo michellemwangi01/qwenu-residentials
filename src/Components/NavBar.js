@@ -4,8 +4,6 @@ import { listingsDataContext } from "./FetchAPIData";
 import "../Styles/NavBarStyles.css";
 
 const NavBar = () => {
-  const listingsData = useContext(listingsDataContext);
-  console.log(listingsData);
   return (
     <nav className="navBarComponent">
       <div>
@@ -14,16 +12,24 @@ const NavBar = () => {
       <div>
         <ul>
           <li className="navLinks">
-            <NavLink to="home">Home</NavLink>
+            <NavLink exact to="qwetuHomes">
+              Homes
+            </NavLink>
           </li>
           <li className="navLinks">
-            <NavLink to="qwetuHomes">Homes</NavLink>
+            <NavLink exact to="qwetuGallery">
+              Gallery
+            </NavLink>
           </li>
           <li className="navLinks">
-            <NavLink to="qwetuGallery">Gallery</NavLink>
+            <NavLink exact to="houseDetails">
+              Details
+            </NavLink>
           </li>
           <li className="navLinks">
-            <NavLink to="homeDetails">Details</NavLink>
+            <NavLink exact to="contacts">
+              Contacts
+            </NavLink>
           </li>
         </ul>
       </div>
