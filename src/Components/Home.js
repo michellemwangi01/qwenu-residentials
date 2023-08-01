@@ -21,7 +21,7 @@ function Home(){
     <li class="list-group-item">{home.area}</li>
   </ul>
   <div class="card-body">
-  <a href="/" class="btn btn-primary">See home</a>
+  <a href="/" class="btn btn-primary">See home details</a>
   </div>
 </div>
       ))
