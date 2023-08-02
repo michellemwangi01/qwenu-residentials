@@ -5,7 +5,7 @@ import { Router, Routes, Route, Outlet, useLocation } from "react-router-dom";
 function Listings() {
   const [homes, setHomes] = useState([]);
   const [dataLoaded, setDataLoaded] = useState(false);
-  // console.log(homes);
+
   useEffect(() => {
     fetch(" https://db-qwenuresidentials.onrender.com/listings")
       .then((resp) => resp.json())

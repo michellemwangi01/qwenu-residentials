@@ -84,6 +84,11 @@ a {
   width: 100%;
   margin: 20px;
 }
+.propertyListingCard {
+  width: 20rem;
+  margin: 20px;
+  height: 40rem;
+}
 .listingDetailsHeader h1 {
   text-align: center;
   font-family: Georgia, "Times New Roman", Times, serif;

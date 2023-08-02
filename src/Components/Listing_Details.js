@@ -20,7 +20,8 @@ const Listing_Details = () => {
       {
         method: "GET",
         headers: {
-          "X-RapidAPI-Key": "YOUR_API_KEY", // Replace with your RapidAPI Key
+          "X-RapidAPI-Key":
+            "7fc49377d8msheb449ffa1261c1ap1acde1jsn263864e44c6e",
           "X-RapidAPI-Host": "bayut.p.rapidapi.com",
         },
       }
@@ -32,14 +33,14 @@ const Listing_Details = () => {
         let imgURLArray = photosArray.map((imgItem) => imgItem.url);
         setImages(imgURLArray);
         setCurrentImage(imgURLArray[0]);
+
+        const interval = setInterval(() => {
+          setCount((prevCount) => (prevCount + 1) % imgURLArray.length);
+        }, 4000);
+
+        return () => clearInterval(interval);
       });
-
-    const interval = setInterval(() => {
-      setCount((prevCount) => (prevCount + 1) % images.length);
-    }, 4000);
-
-    return () => clearInterval(interval);
-  }, [externalID, images]);
+  }, [externalID]);
 
   useEffect(() => {
     setCurrentImage(images[count]);
@@ -53,23 +54,23 @@ const Listing_Details = () => {
         </h1>
       </div>
       <div className="listingDetailsCard">
-        <div class="card mb-3">
-          {!currentProperty ? (
-            <div>
-              <small> Loading ....</small>
-            </div>
+        <div className="card mb-3">
+          {images.length > 0 ? (
+            <img src={currentImage} className="card-img-top" alt="Listing" />
           ) : (
-            <img src={currentImage} class="card-img-top" alt="Listing"></img>
+            <div>
+              <small>Loading ....</small>
+            </div>
           )}
-          <div class="card-body">
-            <h5 class="card-title">{currentProperty.title}</h5>
+          <div className="card-body">
+            <h5 className="card-title">{currentProperty.title}</h5>
             <p>baths: {currentProperty.baths}</p>
             <p>sq. {currentProperty.area}</p>
             <p>${currentProperty.price}</p>
             <p>Purpose: {currentProperty.purpose}</p>
             <p>{currentProperty.description}</p>
-            <p class="card-text">
-              <small class="text-muted">{currentProperty.amenities}</small>
+            <p className="card-text">
+              <small className="text-muted">{currentProperty.amenities}</small>
             </p>
           </div>
         </div>
