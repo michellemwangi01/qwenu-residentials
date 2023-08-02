@@ -12046,6 +12046,24 @@
       "MobileNumber": "12323",
       "DateofOccupancy": "2023-08-22",
       "id": 14
+    },
+    {
+      "propertyID": 4291237,
+      "HouseTitle": "BRAND NEW STUDIO IN MEYDAN| FREE CLEANING |BILLS INCLUDED - 4291237",
+      "FullNames": "Michelle Mwangi",
+      "Email": "Amirah@bosslady.com",
+      "MobileNumber": "0723897234",
+      "DateofOccupancy": "2023-08-23",
+      "id": 15
+    },
+    {
+      "propertyID": 4291237,
+      "HouseTitle": "BRAND NEW STUDIO IN MEYDAN| FREE CLEANING |BILLS INCLUDED - 4291237",
+      "FullNames": "",
+      "Email": "",
+      "MobileNumber": "",
+      "DateofOccupancy": "",
+      "id": 16
     }
   ]
 }

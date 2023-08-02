@@ -14,6 +14,36 @@
 .invisible-input {
   display: none;
 }
+table {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
+}
+.componentContainer {
+  display: flex;
+  flex-direction: column;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 500;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
+  margin-top: 2rem;
+}
+tbody tr:nth-child(odd) {
+  background-color: var(--main-color);
+  opacity: 0.8;
+  color: white;
+}
+tbody tr td {
+  padding: 10px;
+}
+thead tr td {
+  background-color: var(--main-color);
+  padding: 20px;
+  color: white;
+  font-size: 1.2rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
 #propertyBookedNotification {
   position: absolute;
   font-size: 12rem;

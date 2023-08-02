@@ -28,8 +28,8 @@ const NavBar = () => {
               </NavLink>
             </li>
             <li className="navLinks">
-              <NavLink exact to="contacts">
-                Contacts
+              <NavLink exact to="bookings">
+                Bookings
               </NavLink>
             </li>
           </ul>

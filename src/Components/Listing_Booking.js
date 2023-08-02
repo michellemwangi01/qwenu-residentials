@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../Styles/FormStyles.css";
+import { Link } from "react-router-dom";
 
 const Listing_Booking = ({ propertyTitle, propertyID }) => {
   const initialBookingState = {
@@ -153,7 +154,8 @@ const Listing_Booking = ({ propertyTitle, propertyID }) => {
           *Once added, the property is booked, the details can be viewed in the
           booking list on the home page. list below.
         </p>
-        <button
+        <Link
+          to="/bookings"
           class="addTransactionBtn"
           onClick={submitHandler}
           id="submit"
@@ -167,7 +169,7 @@ const Listing_Booking = ({ propertyTitle, propertyID }) => {
           }
         >
           Add
-        </button>
+        </Link>
       </fieldset>
     </form>
   );

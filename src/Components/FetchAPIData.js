@@ -29,7 +29,7 @@ const FetchAPIData = ({ children }) => {
       .then((data) => setBookingsData(data));
   }, []);
 
-  console.log(bookingsData);
+  // console.log(bookingsData);
   const values = { bookingsData, listingsData };
 
   return (
