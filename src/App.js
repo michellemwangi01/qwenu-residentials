@@ -10,7 +10,6 @@ function App() {
     <div className="App">
       <FetchAPIData>
         <NavBar />
-        <Listing_Details />
         <RouterComponent />
       </FetchAPIData>
     </div>
