@@ -7,7 +7,6 @@ import Row from 'react-bootstrap/Row';
 
 const Listings_Search = () => {
 
-
   const [housearry , setHousearry] = useState([])
   const [searchitem , setSearchitem] = useState('')
    
@@ -26,8 +25,7 @@ const Listings_Search = () => {
 
     
    const filteredData = housearry.filter(item =>{
-  
-    item.location.map((item)=>
+      item.location.map((item)=>
       item.name.toLowerCase()
     ).includes(searchitem.toLowerCase())
    })
@@ -60,8 +58,6 @@ const Listings_Search = () => {
   </Form>
       </div>
     </div> 
-
-
   ) ;
 };
 

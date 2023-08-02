@@ -93,3 +93,10 @@ a {
   margin: 1rem;
   color: black;
 }
+#searchform{
+  align-items: center;
+  justify-content: center;
+}
+#searchid{
+  margin-left: 700px;
+}
