@@ -8,9 +8,11 @@ import Listing_Details from "./Components/Listing_Details";
 function App() {
   return (
     <div className="App">
-      <FetchAPIData />
-      <NavBar />
-      <RouterComponent />
+      <FetchAPIData>
+        <NavBar />
+        <Listing_Details />
+        <RouterComponent />
+      </FetchAPIData>
     </div>
   );
 }
