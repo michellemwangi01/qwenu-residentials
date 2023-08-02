@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "../Styles/FormStyles.css";
 
-const Listing_Booking = () => {
+const Listing_Booking = ({ propertyTitle, propertyID }) => {
   const initialBookingState = {
-    HouseTitle: "",
+    HouseTitle: `${propertyTitle} - ${propertyID}`,
     FullNames: "",
     Email: "",
     MobileNumber: "",
