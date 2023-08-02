@@ -1,8 +1,11 @@
 import React, { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import { listingsDataContext } from "./FetchAPIData";
+import Listing_Booking from "./Listing_Booking";
 
 const Listing_Details = () => {
+  const [bookingFormVisible, setBookingFormVisible] = useState(false);
+  const [btnText, setBtnText] = useState("Book Property");
   const { externalID } = useParams();
   const [images, setImages] = useState([]);
   const [currentImage, setCurrentImage] = useState("");
@@ -10,10 +13,10 @@ const Listing_Details = () => {
   const [listingData, setListingData] = useState({});
   const { listingsData } = useContext(listingsDataContext);
 
-  console.log(listingsData);
   const currentProperty = listingsData.find(
     (property) => property.externalID === externalID
   );
+  // console.log(currentProperty);
 
   // useEffect(() => {
   //   fetch(
@@ -46,7 +49,10 @@ const Listing_Details = () => {
   // useEffect(() => {
   //   setCurrentImage(images[count]);
   // }, [count, images]);
-  console.log(currentProperty);
+  // console.log(currentProperty);
+  if (!currentProperty) {
+    return <h1>data loading...</h1>;
+  }
   return (
     <div className="listingDetailsContainer">
       <div className="listingDetailsHeader">
@@ -57,11 +63,13 @@ const Listing_Details = () => {
       <div className="listingDetailsCard">
         <div className="card mb-3">
           {currentProperty ? (
-            <img
-              src={currentProperty.coverPhoto.url}
-              className="card-img-top"
-              alt="Listing"
-            />
+            <>
+              <img
+                src={currentProperty.coverPhoto.url}
+                className="card-img-top"
+                alt="Listing"
+              />
+            </>
           ) : (
             <div>
               <small>Loading ....</small>
@@ -77,6 +85,17 @@ const Listing_Details = () => {
             <p className="card-text">
               <small className="text-muted">{currentProperty.amenities}</small>
             </p>
+            <button
+              onClick={() => {
+                setBookingFormVisible(!bookingFormVisible);
+                setBtnText("Close Form");
+              }}
+              className="btn btn-primary"
+              id="bookPropertyBtn"
+            >
+              Book Property
+            </button>
+            {bookingFormVisible && <Listing_Booking />}{" "}
           </div>
         </div>
       </div>
