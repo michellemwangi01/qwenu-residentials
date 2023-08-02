@@ -39,17 +39,22 @@ a {
   font-size: 18px;
 }
 .listingsHome {
-  height: 70vh;
+  height: 95vh;
   background-image: linear-gradient(
       rgba(24, 24, 141, 0.5),
       rgba(24, 24, 141, 0.5)
     ),
     url("/src/Images/bgHome.jpg");
 }
-#landingPage h1,
+#landingPage h1 {
+  color: white;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 5rem;
+}
 #landingPage h4 {
   color: white;
   font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.9rem;
 }
 #landingPageContent {
   margin: auto;
@@ -61,12 +66,14 @@ a {
   left: 10%;
 }
 #landingCallToAction button {
-  width: 6rem;
+  width: 8rem;
   padding: 9px;
   background-color: var(--secondary-color);
+  opacity: 0.8;
+  border: 1px white solid;
   margin: 7px;
   color: whitesmoke;
-  border: none;
+
   margin-top: 3rem;
 }
 
@@ -113,4 +120,5 @@ a {
   opacity: 0.9;
   margin: 1rem;
   color: black;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
