@@ -10,7 +10,7 @@ const FetchAPIData = ({ children }) => {
   const [listingData, setListingData] = useState({});
 
   useEffect(() => {
-    fetch("http://localhost:3000/listings", {
+    fetch("https://db-qwenuresidentials.onrender.com/listings", {
       method: "GET",
       // headers: {
       //   "X-RapidAPI-Key": "47f6ed740fmsh71585dcfcf20c8bp1af58fjsnd4a08f796f4f",

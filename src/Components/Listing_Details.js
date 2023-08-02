@@ -56,15 +56,19 @@ const Listing_Details = () => {
       </div>
       <div className="listingDetailsCard">
         <div className="card mb-3">
-          {images.length > 0 ? (
-            <img src={currentImage} className="card-img-top" alt="Listing" />
+          {currentProperty ? (
+            <img
+              src={currentProperty.coverPhoto.url}
+              className="card-img-top"
+              alt="Listing"
+            />
           ) : (
             <div>
               <small>Loading ....</small>
             </div>
           )}
           <div className="card-body">
-            {/* <h5 className="card-title">{currentProperty.title}</h5>
+            <h5 className="card-title">{currentProperty.title}</h5>
             <p>baths: {currentProperty.baths}</p>
             <p>sq. {currentProperty.area}</p>
             <p>${currentProperty.price}</p>
@@ -72,7 +76,7 @@ const Listing_Details = () => {
             <p>{currentProperty.description}</p>
             <p className="card-text">
               <small className="text-muted">{currentProperty.amenities}</small>
-            </p> */}
+            </p>
           </div>
         </div>
       </div>
