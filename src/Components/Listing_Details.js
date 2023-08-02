@@ -10,6 +10,7 @@ const Listing_Details = () => {
   const [listingData, setListingData] = useState({});
   const { listingsData } = useContext(listingsDataContext);
 
+  console.log(listingData);
   const currentProperty = listingsData.find(
     (property) => property.externalID === externalID
   );
