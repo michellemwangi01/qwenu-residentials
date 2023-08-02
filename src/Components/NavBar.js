@@ -31,6 +31,7 @@ const NavBar = () => {
               <NavLink exact to="contacts">
                 Contacts
               </NavLink>
+              <li className="Filter"></li>
             </li>
           </ul>
         </div>
