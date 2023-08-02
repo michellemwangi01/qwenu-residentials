@@ -22,8 +22,7 @@ function Listings() {
     <>
       <div>
         <h1 id="listingsContainerTitle">Explore</h1>
-        <Listings_Search  
-        
+        <Listings_Search 
         homes = {homes}
         sethome = {setHomes}
         />
