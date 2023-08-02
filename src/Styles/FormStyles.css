@@ -18,6 +18,9 @@
   border: 1px solid var(--primary-color);
   border-radius: 10px;
 }
+#addTransaction {
+  background-color: whitesmoke;
+}
 form p {
   background-color: transparent;
 }
