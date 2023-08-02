@@ -11932,7 +11932,7 @@
       "plotArea": 111.39074496
     }
   ],
-  "clients": [
+  "bookings": [
     {
       "id": 1,
       "HouseTitle": "Beautiful Family Home",
@@ -12020,6 +12020,50 @@
       "MobileNumber": "827323",
       "DateofOccupancy": "2023-08-14",
       "id": 11
+    },
+    {
+      "HouseTitle": "Experience the Allure of a Stunning 2-BD in La Mer - 4593430",
+      "FullNames": "mamamia",
+      "Email": "qwe@wew.com",
+      "MobileNumber": "12323",
+      "DateofOccupancy": "2023-08-08",
+      "id": 12
+    },
+    {
+      "propertyID": 4593430,
+      "HouseTitle": "Experience the Allure of a Stunning 2-BD in La Mer - 4593430",
+      "FullNames": "Mamaa",
+      "Email": "qwe@wew.com",
+      "MobileNumber": "82732",
+      "DateofOccupancy": "2023-08-23",
+      "id": 13
+    },
+    {
+      "propertyID": 4291237,
+      "HouseTitle": "BRAND NEW STUDIO IN MEYDAN| FREE CLEANING |BILLS INCLUDED - 4291237",
+      "FullNames": "Mamaa",
+      "Email": "qwe@wew.com",
+      "MobileNumber": "12323",
+      "DateofOccupancy": "2023-08-22",
+      "id": 14
+    },
+    {
+      "propertyID": 4291237,
+      "HouseTitle": "BRAND NEW STUDIO IN MEYDAN| FREE CLEANING |BILLS INCLUDED - 4291237",
+      "FullNames": "Michelle Mwangi",
+      "Email": "Amirah@bosslady.com",
+      "MobileNumber": "0723897234",
+      "DateofOccupancy": "2023-08-23",
+      "id": 15
+    },
+    {
+      "propertyID": 4291237,
+      "HouseTitle": "BRAND NEW STUDIO IN MEYDAN| FREE CLEANING |BILLS INCLUDED - 4291237",
+      "FullNames": "",
+      "Email": "",
+      "MobileNumber": "",
+      "DateofOccupancy": "",
+      "id": 16
     }
   ]
 }

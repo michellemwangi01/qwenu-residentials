@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import "../Styles/FormStyles.css";
+import { Link } from "react-router-dom";
 
 const Listing_Booking = ({ propertyTitle, propertyID }) => {
   const initialBookingState = {
+    propertyID: propertyID,
     HouseTitle: `${propertyTitle} - ${propertyID}`,
     FullNames: "",
     Email: "",
@@ -14,9 +16,7 @@ const Listing_Booking = ({ propertyTitle, propertyID }) => {
 
   function submitHandler(e) {
     e.preventDefault();
-    console.log(e);
-    console.log("I was clicked");
-    fetch("http://localhost:4000/clients", {
+    fetch("http://localhost:4000/bookings", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -42,7 +42,19 @@ const Listing_Booking = ({ propertyTitle, propertyID }) => {
     <form id="addTransaction">
       <fieldset id="IdentityKinInfo" class="row g-3 scheduler-border">
         {/* <legend class="scheduler-border"> New Transaction</legend> */}
-
+        <div class="transactionDetailInputDiv">
+          <input
+            onChange={inputHandler}
+            value={newBooking.propertyID}
+            id="Mobile"
+            type="text"
+            name="HouseTitle "
+            class="myformControl newCollectionDetails invisible-input"
+            aria-label="Sizing example input"
+            aria-describedby=""
+            readOnly
+          ></input>
+        </div>
         <div class="transactionDetailInputDiv">
           <span class="clientdeets" id="">
             House Title
@@ -142,7 +154,8 @@ const Listing_Booking = ({ propertyTitle, propertyID }) => {
           *Once added, the property is booked, the details can be viewed in the
           booking list on the home page. list below.
         </p>
-        <button
+        <Link
+          to="/bookings"
           class="addTransactionBtn"
           onClick={submitHandler}
           id="submit"
@@ -156,7 +169,7 @@ const Listing_Booking = ({ propertyTitle, propertyID }) => {
           }
         >
           Add
-        </button>
+        </Link>
       </fieldset>
     </form>
   );

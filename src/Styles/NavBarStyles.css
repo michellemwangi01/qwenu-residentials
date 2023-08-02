@@ -11,6 +11,53 @@
   display: flex;
   align-items: center;
 }
+.invisible-input {
+  display: none;
+}
+table {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
+}
+.componentContainer {
+  display: flex;
+  flex-direction: column;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 500;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
+  margin-top: 2rem;
+}
+tbody tr:nth-child(odd) {
+  background-color: var(--main-color);
+  opacity: 0.8;
+  color: white;
+}
+tbody tr td {
+  padding: 10px;
+}
+thead tr td {
+  background-color: var(--main-color);
+  padding: 20px;
+  color: white;
+  font-size: 1.2rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+#propertyBookedNotification {
+  position: absolute;
+  font-size: 12rem;
+  color: red;
+  opacity: 0.5;
+  transform: rotate(-30deg);
+  z-index: 10;
+  top: 25%;
+  left: 10%;
+}
+.disabled-btn-book {
+  background-color: red;
+  color: white;
+}
 #agencyDetails {
   display: flex;
   flex-direction: row;
@@ -26,6 +73,7 @@
 }
 .card-text-amenities {
   font-size: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 em {
   font-weight: bold;
@@ -41,7 +89,7 @@ small {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  width: 60%;
+  width: 50%;
   margin: auto;
   margin-top: 20px;
 }
@@ -51,6 +99,16 @@ small {
 #bookPropertyBtn {
   background-color: var(--main-color);
   margin-bottom: 1rem;
+  padding: 1rem;
+  width: 40%;
+}
+#listingDetailsComponent {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  width: 90%;
 }
 .navBarComponent {
   display: flex;
@@ -81,11 +139,11 @@ a {
 }
 .listingsHome {
   height: 95vh;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
       rgba(24, 24, 141, 0.5),
       rgba(24, 24, 141, 0.5)
     ),
-    url("/src/Images/bgHome.jpg");
+    url("/src/Images/bgHome.jpg"); */
 }
 #landingPage h1 {
   color: white;

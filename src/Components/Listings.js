@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import ListingCards from "./ListingCards";
 import { Router, Routes, Route, Outlet, useLocation } from "react-router-dom";
-import Listing_Booking from "./Listing_Booking";
+
 function Listings() {
   const [homes, setHomes] = useState([]);
   const [dataLoaded, setDataLoaded] = useState(false);
@@ -21,6 +21,7 @@ function Listings() {
     <>
       <div>
         <h1 id="listingsContainerTitle">Explore</h1>
+        {/* <Listings_Search /> */}
         {homes ? (
           <div className="listingsContainer">{homesList}</div>
         ) : (

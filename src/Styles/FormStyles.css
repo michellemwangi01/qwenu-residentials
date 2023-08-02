@@ -13,13 +13,13 @@
   margin: auto;
   padding: 2rem;
   /* visibility: hidden; */
-  width: 60%;
+  width: 90%;
   margin-bottom: 1rem;
-  border: 1px solid var(--primary-color);
   border-radius: 10px;
 }
 #addTransaction {
   background-color: whitesmoke;
+  /* border: 1px solid var(--primary-color); */
 }
 form p {
   background-color: transparent;
