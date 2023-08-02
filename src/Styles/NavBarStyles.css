@@ -1,0 +1,124 @@
+:root {
+  --main-color: #0c0c4c;
+  --secondary-color: #4242df;
+  --tertiary-color: whitesmoke;
+}
+#QwetuLogo {
+  font-size: 2rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+#navLinksContainer ul {
+  display: flex;
+  align-items: center;
+}
+.navBarComponent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.2rem;
+  background-color: rgba(12, 25, 104, 0.8);
+  color: whitesmoke;
+  /* border-bottom: 0.5px white solid; */
+}
+.navBarComponent div ul li {
+  display: flex;
+  align-items: center;
+}
+.navLinks {
+  list-style: none;
+}
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+a {
+  margin: 9px;
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 18px;
+}
+.listingsHome {
+  height: 95vh;
+  background-image: linear-gradient(
+      rgba(24, 24, 141, 0.5),
+      rgba(24, 24, 141, 0.5)
+    ),
+    url("/src/Images/bgHome.jpg");
+}
+#landingPage h1 {
+  color: white;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 5rem;
+}
+#landingPage h4 {
+  color: white;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.9rem;
+}
+#landingPageContent {
+  margin: auto;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 30%;
+  left: 10%;
+}
+#landingCallToAction button {
+  width: 8rem;
+  padding: 9px;
+  background-color: var(--secondary-color);
+  opacity: 0.8;
+  border: 1px white solid;
+  margin: 7px;
+  color: whitesmoke;
+
+  margin-top: 3rem;
+}
+
+#listingDetails h1 {
+  margin-top: 0.5rem;
+  padding: 1rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.card-img-top {
+  height: 40rem;
+  object-fit: cover;
+}
+.listingDetailsCard {
+  margin: auto;
+  width: 100%;
+  margin: 20px;
+}
+.propertyListingCard {
+  width: 20rem;
+  margin: 20px;
+  height: 40rem;
+}
+.listingDetailsHeader h1 {
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.listingDetailsContainer {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+.listingsContainer {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: auto;
+  width: 80%;
+}
+#listingsContainerTitle {
+  opacity: 0.9;
+  margin: 1rem;
+  color: black;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
