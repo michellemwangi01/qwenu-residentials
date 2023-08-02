@@ -29,7 +29,7 @@ const FetchAPIData = ({ children }) => {
   }, []);
   // console.log(listingsData);
   const values = { listingsData };
-  console.log(listingsData);
+  // console.log(listingsData);
   return (
     <div>
       <listingsDataContext.Provider value={values}>

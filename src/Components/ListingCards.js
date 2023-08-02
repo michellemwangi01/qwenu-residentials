@@ -7,8 +7,8 @@ const ListingCards = ({ home }) => {
   };
   return (
     <div>
-      <div class="card" key={home.id}>
-        <img src={home.coverPhoto.url} class="card-img-top" alt={home.state} />
+      <div class="card propertyListingCard" key={home.id}>
+        <img src={home.coverPhoto.url} class="" alt={home.state} />
         <div class="card-body">
           <h5 class="card-title">{home.location.name}</h5>
           <p class="card-text">
@@ -21,7 +21,6 @@ const ListingCards = ({ home }) => {
           <li class="list-group-item">{home.rooms}</li>
           <li class="list-group-item">{home.contactName}</li>
           <li class="list-group-item">{home.area}</li>
-          <li>ExternalID: {home.externalID}</li>
         </ul>
         <div class="card-body">
           <Link to={`/homeListings/${home.externalID}`} class="btn btn-primary">

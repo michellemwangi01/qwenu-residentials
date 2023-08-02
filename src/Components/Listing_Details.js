@@ -10,12 +10,10 @@ const Listing_Details = () => {
   const [listingData, setListingData] = useState({});
   const { listingsData } = useContext(listingsDataContext);
 
-  // console.log(listingsData);
-  // console.log(externalID);
   const currentProperty = listingsData.find(
     (property) => property.externalID === externalID
   );
-  console.log(currentProperty);
+
   useEffect(() => {
     fetch(
       `https://bayut.p.rapidapi.com/properties/detail?externalID=${externalID}`,
@@ -23,7 +21,7 @@ const Listing_Details = () => {
         method: "GET",
         headers: {
           "X-RapidAPI-Key":
-            "47f6ed740fmsh71585dcfcf20c8bp1af58fjsnd4a08f796f4f",
+            "7fc49377d8msheb449ffa1261c1ap1acde1jsn263864e44c6e",
           "X-RapidAPI-Host": "bayut.p.rapidapi.com",
         },
       }
@@ -32,27 +30,21 @@ const Listing_Details = () => {
       .then((data) => {
         setListingData(data);
         const photosArray = data.photos;
-        let imgURLArray = [];
-        for (const imgItem of photosArray) {
-          imgURLArray.push(imgItem.url);
-        }
+        let imgURLArray = photosArray.map((imgItem) => imgItem.url);
         setImages(imgURLArray);
+        setCurrentImage(imgURLArray[0]);
+
+        const interval = setInterval(() => {
+          setCount((prevCount) => (prevCount + 1) % imgURLArray.length);
+        }, 4000);
+
+        return () => clearInterval(interval);
       });
-  }, []);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCount((prevCount) => (prevCount + 1) % images.length);
-    }, 4000);
-
-    return () => clearInterval(interval);
-  }, []);
+  }, [externalID]);
 
   useEffect(() => {
     setCurrentImage(images[count]);
-  }, [count]);
-
-  console.log(`Images Count: ${images.length}`);
+  }, [count, images]);
 
   return (
     <div className="listingDetailsContainer">
@@ -62,21 +54,24 @@ const Listing_Details = () => {
         </h1>
       </div>
       <div className="listingDetailsCard">
-        <div class="card mb-3">
-          {!currentImage ? (
-            <div>
-              <small> Loading ....</small>
-            </div>
+        <div className="card mb-3">
+          {images.length > 0 ? (
+            <img src={currentImage} className="card-img-top" alt="Listing" />
           ) : (
-            <img src={currentImage} class="card-img-top"></img>
+            <div>
+              <small>Loading ....</small>
+            </div>
           )}
-          <div class="card-body">
-            <h5 class="card-title">{currentProperty.title}</h5>
-            <p class="card-text">
-              <small class="text-muted">{currentProperty.amenities}</small>
+          <div className="card-body">
+            <h5 className="card-title">{currentProperty.title}</h5>
+            <p>baths: {currentProperty.baths}</p>
+            <p>sq. {currentProperty.area}</p>
+            <p>${currentProperty.price}</p>
+            <p>Purpose: {currentProperty.purpose}</p>
+            <p>{currentProperty.description}</p>
+            <p className="card-text">
+              <small className="text-muted">{currentProperty.amenities}</small>
             </p>
-
-            {/* <p class="card-text">{description_l2}</p> */}
           </div>
         </div>
       </div>
