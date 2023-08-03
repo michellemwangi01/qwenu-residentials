@@ -242,8 +242,9 @@ a {
 .listingDetailsHeader p {
   padding-top: 2rem;
   text-align: center;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-weight: 400;
+  font-family: "Dancing Script";
+  font-size: 20rem;
+  font-weight: 600;
   font-size: 2rem;
 }
 #bookingDetailsContainer {
