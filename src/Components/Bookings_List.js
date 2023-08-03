@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import Booking from "./Booking";
 import { listingsDataContext } from "./FetchAPIData";
 import "../Styles/NavBarStyles.css";
+import { toast } from "react-toastify";
 
 const Bookings__List = () => {
   const { bookingsData, setBookingsData } = useContext(listingsDataContext);
@@ -32,8 +33,13 @@ const Bookings__List = () => {
         (booking) => booking.id !== id
       );
       setBookingsData(newBookingList);
+      toastSuccessfulBookingDelete(id);
     });
   }
+  const toastSuccessfulBookingDelete = (id) =>
+    toast(`Booking record ${id} has been successfully deleted!`, {
+      type: "success",
+    });
 
   return (
     <div className="componentContainer">
