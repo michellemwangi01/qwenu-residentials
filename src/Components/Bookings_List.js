@@ -6,7 +6,6 @@ import "../Styles/NavBarStyles.css";
 const Bookings__List = () => {
   const { bookingsData } = useContext(listingsDataContext);
   const [bookings, setBookings] = useState([]);
-
   console.log(bookingsData);
 
   useEffect(() => {
@@ -17,13 +16,16 @@ const Bookings__List = () => {
     }
   }, [bookingsData]);
 
-  const bookingList = bookings.map((booking) => (
-    <Booking
-      key={booking.id}
-      booking={booking}
-      onDeletebooking={deleteBooking}
-    />
-  ));
+  const bookingList = bookings
+    .slice()
+    .reverse()
+    .map((booking) => (
+      <Booking
+        key={booking.id}
+        booking={booking}
+        onDeletebooking={deleteBooking}
+      />
+    ));
 
   //***********************************COLUMN SORTING******************************************* */
   const [data, setData] = useState([]);
@@ -53,6 +55,7 @@ const Bookings__List = () => {
         <thead className="thead-dark">
           <tr>
             <td>Property ID</td>
+            <td>Location</td>
             <td>Name</td>
             <td>Email</td>
             <td>Title</td>

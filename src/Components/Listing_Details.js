@@ -14,8 +14,14 @@ const Listing_Details = () => {
   const [listingData, setListingData] = useState({});
   const { listingsData, bookingsData } = useContext(listingsDataContext);
   const [formToggler, setFormToggler] = useState(false);
-  const [addTransactionBtnText, setAddTransactionBtnText] =
-    useState("Book Property");
+  // const [addTransactionBtnText, setAddTransactionBtnText] =
+  //   useState("Book Property");
+
+  // const [bookingsDataArray, setBookingsDataArray] = useC;
+
+  if (!bookingsData || !listingsData) {
+    return <h1>Loading...</h1>;
+  }
 
   const currentProperty = listingsData.find(
     (property) => property.externalID === externalID
@@ -26,20 +32,21 @@ const Listing_Details = () => {
   );
 
   const formTogglerHandler = () => {
-    setFormToggler(!formToggler);
     setBookingFormVisible(!bookingFormVisible);
   };
-  useEffect(() => {
-    if (bookedItem) {
-      setAddTransactionBtnText("Property Booked!");
-    } else {
-      formToggler
-        ? setAddTransactionBtnText("Close Form")
-        : setAddTransactionBtnText("Book Property");
-    }
-  }, [formToggler]);
 
-  console.log(currentProperty);
+  const isPropertyBooked = bookedItem !== undefined;
+  const isFormToggled = bookingFormVisible;
+
+  let addTransactionBtnText = "";
+
+  if (isPropertyBooked) {
+    addTransactionBtnText = "Property Booked!";
+  } else {
+    addTransactionBtnText = isFormToggled ? "Close Form" : "Book Property";
+  }
+
+  // console.log(currentProperty);
   if (!currentProperty) {
     return <h1>loading...</h1>;
   }
@@ -49,11 +56,7 @@ const Listing_Details = () => {
     ? amenities.join(", ")
     : "No amenities listed";
 
-  console.log(currentProperty);
-
-  if (!bookingsData) {
-    return <h1>loading...</h1>;
-  }
+  // console.log(currentProperty);
 
   return (
     <div id="listingDetailsComponent">
@@ -75,13 +78,26 @@ const Listing_Details = () => {
               </div>
             )}
             <div className="card-body">
+              <h3>
+                {currentProperty.location[2].name.toUpperCase()},{" "}
+                {currentProperty.location[3].name.toUpperCase()}
+              </h3>
               {bookedItem && <h2 id="propertyBookedNotification">Booked!</h2>}
 
-              <h5 className="card-title">{currentProperty.title}</h5>
+              <h5 className="card-title-Details">{currentProperty.title}</h5>
               <div id="propertyDetails-Tag">
-                <p>Baths: {currentProperty.baths}</p>
-                <p>sq. {currentProperty.area}</p>
-                <p>${currentProperty.price}</p>
+                <p>
+                  <i class="fa fa-bed"></i> {currentProperty.rooms}
+                </p>
+                <p>
+                  <i class="fa fa-bath"></i> {currentProperty.baths}
+                </p>
+                <p>
+                  <i class="fa fa-expand"></i> {currentProperty.area} ft.
+                </p>
+                <p>
+                  <i class="fa-money-bill"></i>${currentProperty.price}.00
+                </p>
                 <p>Purpose: {currentProperty.purpose}</p>
               </div>
               <div id="agencyDetails">
@@ -97,11 +113,11 @@ const Listing_Details = () => {
           </div>
         </div>
       </div>
-      <div>
+      <div id="bookingDetailsContainer">
         <div className="listingDetailsHeader">
-          <h1>
+          <p>
             Embark on Your Journey to the perfect Abode. Make your booking here!
-          </h1>
+          </p>
         </div>
         <button
           onClick={formTogglerHandler}
@@ -115,6 +131,7 @@ const Listing_Details = () => {
           <Listing_Booking
             propertyID={currentProperty.id}
             propertyTitle={currentProperty.title}
+            propertyLocation={`${currentProperty.location[2].name}-${currentProperty.location[2].name}`}
           />
         )}{" "}
       </div>

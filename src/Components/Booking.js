@@ -10,6 +10,7 @@ const Booking = ({ booking, onDeletebooking }) => {
   return (
     <tr key={booking.id}>
       <td>{booking.propertyID}</td>
+      <td>{booking.Location}</td>
       <td>{booking.FullNames} </td>
       <td>{booking.Email}</td>
       <td>{booking.HouseTitle}</td>

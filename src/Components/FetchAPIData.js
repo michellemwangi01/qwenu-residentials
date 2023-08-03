@@ -9,21 +9,29 @@ export const listingsDataContext = createContext();
 
 const FetchAPIData = ({ children }) => {
   const [listingsData, setListingsData] = useState([]);
-  const [bookingsData, setBookingsData] = useState({});
+  const [bookingsData, setBookingsData] = useState([]);
 
   useEffect(() => {
     fetch("https://db-qwenuresidentials.onrender.com/listings", {
       method: "GET",
-      // headers: {
-      //   "X-RapidAPI-Key": "47f6ed740fmsh71585dcfcf20c8bp1af58fjsnd4a08f796f4f",
-      //   "X-RapidAPI-Host": "bayut.p.rapidapi.com",
-      // },
     })
       .then((res) => res.json())
       .then((data) => setListingsData(data));
   }, []);
   console.log(listingsData);
+
   const values = { listingsData };
+
+
+//   useEffect(() => {
+//     fetch("https://db-qwenuresidentials.onrender.com/bookings")
+//       .then((res) => res.json())
+//       .then((data) => setBookingsData(data));
+//   }, []);
+
+//   // console.log(bookingsData);
+//   const values = { bookingsData, listingsData, setBookingsData };
+
 
   return (
     <div>
