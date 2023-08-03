@@ -17,7 +17,7 @@ function Listings() {
 
   return (
     <>
-      <div>
+      <div id="mainListingsContainer">
         <h1 id="listingsContainerTitle">Explore</h1>
         <div id="searchContainer">
           <Listings_Search />

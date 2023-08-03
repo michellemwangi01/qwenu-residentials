@@ -23,7 +23,7 @@ function App() {
         />
         <NavBar />
         <RouterComponent />
-        <Footer />
+        {/* <Footer /> */}
       </FetchAPIData>
     </div>
   );
