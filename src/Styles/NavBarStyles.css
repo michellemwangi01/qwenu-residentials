@@ -215,10 +215,12 @@ a {
 .listingsContainer {
   margin-top: 2rem;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   flex-direction: row;
   margin: auto;
-  width: 80%;
+  width: 90%;
 }
 #listingsContainerTitle {
   opacity: 0.9;
