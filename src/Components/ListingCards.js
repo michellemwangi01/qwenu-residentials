@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const ListingCards = ({ home }) => {
-  console.log(home);
+  // console.log(home);
   return (
     <div
       class="card"
