@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+## Qwenu Apartments
+This repository contains a GitHub collaboration Project submission.
+![image](https://github.com/michellemwangi01/qwenu-residentials/assets/84324369/70d99288-3efd-45de-b87d-2364afc77ab7)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Content
+- [Description](https://github.com/michellemwangi01/qwenu-residentials/tree/ft-filternav#description)
+- [Features](https://github.com/michellemwangi01/qwenu-residentials/tree/ft-filternav#features)
+- [Installation Requirements](https://github.com/michellemwangi01/qwenu-residentials/tree/ft-filternav#installation-requirements)
+- [Installation Process](https://github.com/michellemwangi01/qwenu-residentials/tree/ft-filternav#installation-process)
+- [License](https://github.com/michellemwangi01/qwenu-residentials/tree/ft-filternav#license)
+- [Collaborators](https://github.com/michellemwangi01/qwenu-residentials/tree/ft-filternav#collaborators)
 
-## Available Scripts
+## Description
+Qwenu Apartments allows the user to Rent or Purchase a property in the United Arab Emirates through a wide pool of high-end listings.
 
-In the project directory, you can run:
+![image](https://github.com/michellemwangi01/qwenu-residentials/assets/84324369/26f17935-5267-4cbe-bd2c-37d92db15b1e)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
+The React application boasts awesome features such as a highly interactive Search bar to filter out properties by location, By Agency, and Contact person.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![image](https://github.com/michellemwangi01/qwenu-residentials/assets/84324369/6c1a3b2b-43cb-4092-ad39-3b77ea748641)
 
-### `npm test`
+A list of properties is displayed in cards which on expanding a particular listings card, shows more details of the property listing.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![image](https://github.com/michellemwangi01/qwenu-residentials/assets/84324369/b7b09a55-b684-4a6b-acba-2906f849f379)
 
-### `npm run build`
+Click on the view property details button to see more details of that property including images, agent details, amenities etc.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![image](https://github.com/michellemwangi01/qwenu-residentials/assets/84324369/6d46a9b7-2d98-494d-936f-79d84246756e)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+It further allows the user to book the property by filling out a form with their personal details.
 
-### `npm run eject`
+![image](https://github.com/michellemwangi01/qwenu-residentials/assets/84324369/dbbe17a3-4486-4a93-a1f9-66eeae4fd0d6)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Users are also able to filter to match their tastes and needs with a Filter feature.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![image](https://github.com/michellemwangi01/qwenu-residentials/assets/84324369/3023f59e-a483-48ea-9912-4a1942d126cc)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Installation Process
+**To be able to clone the repo to your machine:**
+- Clone the repo to your local server
+- Install necessary packages
+- Run ```npm start```
+- Edit as desired
 
-## Learn More
+ **The site can also be accessed using the link**
+ `https://michellemwangi01.github.io/qwenu-residentials`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**git clone the repository to your local machine using the command**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+$ git@github.com:michellemwangi01/qwenu-residentials.git
+```
 
-### Code Splitting
+## Author & License Information
+This project was authored by and is licensed to &copy; 2023 MichelleMwangi All rights reserved in partnership with collaborators.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Collaborators
+- [Mwasigwa2](https://github.com/Mwasigwa2)
+- [michaelowiti](https://github.com/michaelowiti)
+- [kentechcomps](https://github.com/kentechcomps)
+- [wanyama23](https://github.com/wanyama23)
