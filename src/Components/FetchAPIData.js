@@ -23,6 +23,8 @@ const FetchAPIData = ({ children }) => {
       .then((data) => setListingsData(data));
   }, []);
 
+  console.log(listingsData);
+
   useEffect(() => {
     fetch("https://db-qwenuresidentials.onrender.com/bookings")
       .then((res) => res.json())
