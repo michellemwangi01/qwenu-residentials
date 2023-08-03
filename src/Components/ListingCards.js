@@ -13,6 +13,7 @@ const ListingCards = ({ home }) => {
         height: "580px",
         margin: "10px",
         marginBottom: "15px",
+        
       }}
     >
       <img
