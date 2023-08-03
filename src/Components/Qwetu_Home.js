@@ -1,16 +1,14 @@
 import React from "react";
 import NavBar from "./NavBar";
 import LandingPage from "./LandingPage";
-import Home from "./Home";
+import Home from "./Listings";
 
-const Listings_Home = () => {
+const Qwetu_Home = () => {
   return (
     <div className="listingsHome">
-      <NavBar />
       <LandingPage />
-      <Home />
     </div>
   );
 };
 
-export default Listings_Home;
+export default Qwetu_Home;

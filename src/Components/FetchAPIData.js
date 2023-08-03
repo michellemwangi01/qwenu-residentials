@@ -1,19 +1,18 @@
 import React, { useEffect, useState } from "react";
 import NavBar from "./NavBar";
+import Listing_Details from "./Listing_Details";
 
-export const listingsDataContext = React.createContext();
-export const listingDetailsContext = React.createContext();
-const renderAPIListings = `https://db-qwenuresidentials.onrender.com/listings`;
-const renderAPIListingDetails = `https://db-qwenuresidentials.onrender.com/listingDetails`;
-const localAPIListings = ` http://localhost:4000/listings`;
-const localAPIListingDetails = `http://localhost:4000/listingDetails`;
-const APIGoogleURL = `https://rapidapi.com/apidojo/api/bayut?utm_source=youtube.com%2FJavaScriptMastery&utm_medium=DevRel&utm_campaign=DevRel`;
+import { createContext } from "react";
 
-const FetchAPIData = () => {
+export const listingsDataContext = createContext();
+// export const bookingsDataContext = createContext();
+
+const FetchAPIData = ({ children }) => {
   const [listingsData, setListingsData] = useState([]);
+  const [bookingsData, setBookingsData] = useState({});
 
   useEffect(() => {
-    fetch("http://localhost:3000/listings", {
+    fetch("https://db-qwenuresidentials.onrender.com/listings", {
       method: "GET",
       // headers: {
       //   "X-RapidAPI-Key": "47f6ed740fmsh71585dcfcf20c8bp1af58fjsnd4a08f796f4f",
@@ -23,12 +22,21 @@ const FetchAPIData = () => {
       .then((res) => res.json())
       .then((data) => setListingsData(data));
   }, []);
-  // console.log(listingsData);
+
+  useEffect(() => {
+    fetch("https://db-qwenuresidentials.onrender.com/bookings")
+      .then((res) => res.json())
+      .then((data) => setBookingsData(data));
+  }, []);
+
+  // console.log(bookingsData);
+  const values = { bookingsData, listingsData };
+
   return (
     <div>
-      <listingsDataContext.Provider
-        value={listingsData}
-      ></listingsDataContext.Provider>
+      <listingsDataContext.Provider value={values}>
+        {children}
+      </listingsDataContext.Provider>
     </div>
   );
 };
