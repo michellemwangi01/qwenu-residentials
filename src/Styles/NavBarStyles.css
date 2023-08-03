@@ -201,6 +201,10 @@ a {
   top: 30%;
   left: 10%;
 }
+#landingPageContent h4 {
+  font-family: "Dancing Script";
+  font-size: 2.5rem;
+}
 #landingCallToAction button {
   width: 12rem;
   padding: 9px;
