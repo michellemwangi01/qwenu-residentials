@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { NavLink, Outlet } from "react-router-dom";
-import { listingsDataContext } from "./FetchAPIData";
+
 import "../Styles/NavBarStyles.css";
 
 const NavBar = () => {

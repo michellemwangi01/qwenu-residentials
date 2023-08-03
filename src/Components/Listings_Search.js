@@ -1,60 +1,70 @@
-import { useEffect, useState } from "react";
-import Button from "react-bootstrap/Button";
-import Col from "react-bootstrap/Col";
-import Form from "react-bootstrap/Form";
-import Row from "react-bootstrap/Row";
+import {  useState } from "react";
+import Button from 'react-bootstrap/Button';
+import Col from 'react-bootstrap/Col';
+import Form from 'react-bootstrap/Form';
+import Row from 'react-bootstrap/Row';
 import Listings from "./Listings";
+import { listingsDataContext } from "./FetchAPIData";
+import { useContext } from "react";
 
-const Listings_Search = ({ homes, sethome }) => {
-  const [searchitem, setSearchitem] = useState("");
+const Listings_Search = ({  sethome }) => {
+  
+  const { listingsData } = useContext(listingsDataContext);
 
-  // useEffect(  ()=>{
-  //   fetch('https://db-qwenuresidentials.onrender.com/listings')
-  //   .then(res => res.json())
-  //   .then(data => {
-  //     setHousearry(data)
-  //   })
-  //  }, [])
+  const [searchitem, setSearchitem] = useState('')
+
+  console.log(searchitem);
+
 
   const handleSearchChange = (e) => {
-    setSearchitem(e.target.value);
-    console.log(searchitem);
-  };
-
-  const handleSearch = (e) => {
     e.preventDefault();
-
-    const filteredData = homes.map((item) => {
-      console.log(item);
-      // item.location
-      //   .filter((item) => item.name.toLowerCase())
-      //   .includes(searchitem.toLowerCase());
-    });
-    sethome(filteredData);
+    setSearchitem(e.target.value);
+    console.log(e.target.value);
+    const filteredData = listingsData .filter(item => {
+      return item.title.toLowerCase().includes(searchitem.toLowerCase())})
+      sethome(filteredData)
   };
+  
+
+
+  // const handleSearch = (e) => {
+  //   e.preventDefault();
+
+  //   console.log(searchitem);
+  //   console.log("String " , homes);
+  //   const filteredData = homes.filter(item => {
+  //     return item.title.toLowerCase().includes(searchitem.toLowerCase())
+  //   //  const checkeddata = item.location.filter((item) => item.name.toLowerCase().includes(searchitem.toLowerCase()))
+  //   //  return checkeddata.length > 0
+  //   })
+  //   console.log("Filteredata" , filteredData);
+  
+
+  // }
+
+
 
   return (
-    <div id="searchform">
+    <div id="searchform" >
+
       <div>
-        <Form id="searchid">
+        <Form id="searchid" >
           <Row className="align-items-center">
             <Col xs="auto">
               <Form.Label htmlFor="inlineFormInput" visuallyHidden>
                 Name
               </Form.Label>
-              <Form.Control
-                className="mb-2"
-                id="inlineFormInput"
-                placeholder="Which house are you looking for?"
-                //value={searchitem}
-                onChange={handleSearchChange}
-              />
+
+              <input id= "searchinput" type="text" onChange={handleSearchChange} placeholder="searchhere"></input>
+              {/* <Form.Control
+          className="mb-2"
+          id="inlineFormInput"
+          placeholder="Which house are you looking for?"
+          //value={searchitem}
+          onChange = {handleSearchChange}
+        /> */}
             </Col>
-            <Col xs="auto">
-              <Button type="submit" className="mb-2" onClick={handleSearch}>
-                Search
-              </Button>
-            </Col>
+            
           </Row>
         </Form>
       </div>

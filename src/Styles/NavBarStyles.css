@@ -251,8 +251,15 @@ a {
   color: black;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
-.list-group-item {
-  border: none;
+#searchform{
+  width: 500px;
+  height: 50px;
+  margin-left: 300px;
+  margin-bottom: 40px;
+}
+#searchinput{
+  width: 400px;
+  height: 50px;
 }
 
 footer {

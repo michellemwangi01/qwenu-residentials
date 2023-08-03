@@ -1,6 +1,7 @@
 import { useState, useEffect, useContext } from "react";
 import ListingCards from "./ListingCards";
 import { listingsDataContext } from "./FetchAPIData";
+import Listings_Search from "./Listings_Search";
 import { Router, Routes, Route, Outlet, useLocation } from "react-router-dom";
 
 function Listings() {
@@ -22,8 +23,11 @@ function Listings() {
   return (
     <>
       <div>
-        <h1 id="listingsContainerTitle">Explore Properties</h1>
-
+        <h1 id="listingsContainerTitle">Explore</h1>
+        <Listings_Search
+         sethome={setHomes}
+        
+        />
         {homes ? (
           <div className="listingsContainer">{homesList}</div>
         ) : (
