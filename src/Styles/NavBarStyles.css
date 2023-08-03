@@ -11,6 +11,7 @@
   display: flex;
   justify-content: flex-end;
 }
+
 #navLinksContainer ul {
   display: flex;
   align-items: center;
@@ -265,6 +266,7 @@ a {
   height: 50px;
   margin: auto;
 }
+
 #searchinput {
   width: 400px;
   height: 50px;
@@ -295,5 +297,11 @@ footer {
   margin-right: 30px; /* Adjust the margin value as desired */
   margin-top: 30px;
 }
-.componentContainer {
+#errorPageContainer h1 {
+  font-size: 5rem;
+  margin: 5rem;
+  color: var(--main-color);
+}
+#errorPageContainer h5 {
+  color: var(--main-color);
 }
