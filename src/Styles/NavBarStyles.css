@@ -7,6 +7,10 @@
   font-size: 2rem;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
+#navLinksContainer {
+  display: flex;
+  justify-content: flex-end;
+}
 #navLinksContainer ul {
   display: flex;
   align-items: center;
@@ -110,10 +114,14 @@ small {
   margin: auto;
   width: 90%;
 }
-.navBarComponent {
+.navBarComponent div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 80%;
+  margin: auto;
+}
+.navBarComponent {
   padding: 0.2rem;
   background-color: rgba(12, 25, 104, 0.8);
   color: whitesmoke;
@@ -121,7 +129,9 @@ small {
 }
 .navBarComponent div ul li {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
+}
+.navBarComponent div ul {
 }
 .navLinks {
   list-style: none;
