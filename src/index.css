@@ -27,11 +27,12 @@ code {
   background-color: #555; /* Set the color of the scrollbar thumb on hover */
 }
 
-/* Customize the scrollbar for Firefox */
-/* Note that Firefox requires a different syntax for scrollbar customization */
-/* You can use @-moz-document to target only Firefox */
-@-moz-document url-prefix() {
-  scrollbar-width: thin; /* Set the width of the scrollbar */
-  scrollbar-color: #888 #f0f0f0; /* Set the color of the scrollbar thumb and track */
-  /* The first color is for the thumb, and the second color is for the track */
+.filter-grid-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filter-grid-item {
+  flex: 0 0 25%;
+  padding: 5px;
 }
