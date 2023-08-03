@@ -6,9 +6,11 @@ import { Router, Routes, Route, Outlet, useLocation } from "react-router-dom";
 
 function Listings() {
   const { listingsData } = useContext(listingsDataContext);
-  const [homes, setHomes] = useState(listingsData);
   const [dataLoaded, setDataLoaded] = useState(false);
 
+  if (!listingsData) {
+    return <h1 className="dataLoadingText">data loading...</h1>;
+  }
   const homesList = listingsData.map((home) => (
     <ListingCards key={home.id} home={home} />
   ));
