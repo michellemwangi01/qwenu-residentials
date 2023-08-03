@@ -12,27 +12,32 @@ const Listings_Search = ({ homes, sethome }) => {
 
   console.log(searchitem);
 
+
   const handleSearchChange = (e) => {
+    e.preventDefault();
     setSearchitem(e.target.value);
     console.log(e.target.value);
-  };
-
-
-
-  const handleSearch = (e) => {
-    e.preventDefault();
-
-    console.log(searchitem);
-    console.log("String " , homes);
     const filteredData = homes.filter(item => {
-      return item.title.toLowerCase().includes(searchitem.toLowerCase())
-    //  const checkeddata = item.location.filter((item) => item.name.toLowerCase().includes(searchitem.toLowerCase()))
-    //  return checkeddata.length > 0
-    })
-    console.log("Filteredata" , filteredData);
-    sethome(filteredData)
+      return item.title.toLowerCase().includes(searchitem.toLowerCase())})
+      sethome(filteredData)
+  };
+  
 
-  }
+
+  // const handleSearch = (e) => {
+  //   e.preventDefault();
+
+  //   console.log(searchitem);
+  //   console.log("String " , homes);
+  //   const filteredData = homes.filter(item => {
+  //     return item.title.toLowerCase().includes(searchitem.toLowerCase())
+  //   //  const checkeddata = item.location.filter((item) => item.name.toLowerCase().includes(searchitem.toLowerCase()))
+  //   //  return checkeddata.length > 0
+  //   })
+  //   console.log("Filteredata" , filteredData);
+  
+
+  // }
 
 
 
@@ -58,7 +63,7 @@ const Listings_Search = ({ homes, sethome }) => {
             </Col>
             <Col xs="auto">
               <Button type="submit" className="mb-2"
-                onClick={handleSearch}
+              
               >
                 Search
               </Button>
