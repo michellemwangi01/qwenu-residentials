@@ -272,7 +272,9 @@ a {
   color: black;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
-#searchContainer {
+#searchFilterContainer {
+  display: flex;
+  justify-content: center;
   margin: auto;
   margin-bottom: 1rem;
 }
@@ -297,7 +299,15 @@ a {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 1.2rem;
 }
-
+.seeHomeDetails {
+  /* background-color: var(--main-color); */
+}
+.filterBtn {
+  /* background-color: var(--main-color); */
+  width: 10rem;
+  padding: 10px;
+  margin: 2rem;
+}
 footer {
   display: flex;
   background-color: black;
@@ -324,4 +334,24 @@ footer {
 }
 #errorPageContainer h5 {
   color: var(--main-color);
+}
+
+/* ***************FILTER NAV***************** */
+select,
+option {
+  width: 5rem;
+  padding: 7px;
+  margin: 5px;
+}
+#propertyTypeSelect {
+  width: 8rem;
+}
+label {
+  margin: 5px;
+}
+.checkboxInput {
+  width: 20px;
+  height: 20px;
+  order: 2px solid #ccc;
+  margin-right: 5px;
 }

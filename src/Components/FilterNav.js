@@ -66,7 +66,7 @@ const FilterNav = ({ showModal, onClose }) => {
       </Modal.Header>
       <Modal.Body>
         <div className="filter-item">
-          <label>How many Rooms:</label>
+          <label>No of. Rooms:</label>
           <select
             value={numberOfRooms}
             onChange={(e) => setNumberOfRooms(e.target.value)}
@@ -78,7 +78,7 @@ const FilterNav = ({ showModal, onClose }) => {
         </div>
 
         <div className="filter-item">
-          <label>How many Baths:</label>
+          <label>No. of Baths:</label>
           <select
             value={numberOfBaths}
             onChange={(e) => setNumberOfBaths(e.target.value)}
@@ -93,6 +93,7 @@ const FilterNav = ({ showModal, onClose }) => {
         <div className="filter-item">
           <label>Property Type:</label>
           <select
+            id="propertyTypeSelect"
             value={propertyType}
             onChange={(e) => setPropertyType(e.target.value)}
           >
@@ -105,7 +106,6 @@ const FilterNav = ({ showModal, onClose }) => {
         <div className="filter-item">
           <label>Amenities:</label>
           {[
-            "Chicken Inn",
             "Swimming Pool",
             "Flooring Other",
             "Waste Disposal",
@@ -128,6 +128,7 @@ const FilterNav = ({ showModal, onClose }) => {
           ].map((amenity) => (
             <label key={amenity} className="amenity-checkbox">
               <input
+                className="checkboxInput"
                 type="checkbox"
                 checked={selectedAmenities.includes(amenity)}
                 onChange={handleAmenityChange(amenity)}
@@ -135,22 +136,6 @@ const FilterNav = ({ showModal, onClose }) => {
               {amenity}
             </label>
           ))}
-        </div>
-
-        <div className="filter-item">
-          <label>Price Range:</label>
-          <div id="priceGraph" style={{ width: "100%", height: "100px" }}></div>
-          <div>
-            <span>${minPrice}</span> - <span>${maxPrice}</span>
-          </div>
-          <input
-            type="range"
-            min={9999}
-            max={1000000000}
-            step={1000}
-            value={minPrice}
-            onChange={(e) => setMinPrice(parseInt(e.target.value))}
-          />
         </div>
       </Modal.Body>
       <Modal.Footer>

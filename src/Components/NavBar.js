@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import { NavLink, Outlet } from "react-router-dom";
-
+import { listingsDataContext } from "./FetchAPIData";
 import "../Styles/NavBarStyles.css";
 import FilterNav from "./FilterNav";
 
@@ -23,7 +23,6 @@ const NavBar = () => {
   };
 
   return (
-
     <>
       <nav className="navBarComponent">
         <div>
