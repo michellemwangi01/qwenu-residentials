@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel&family=Cormorant+Garamond:wght@300&family=Dancing+Script&family=IBM+Plex+Serif:wght@300&family=Kalam:wght@300&family=Satisfy&family=Ysabeau+Infant:ital,wght@1,300&display=swap");
 :root {
   --main-color: #0c0c4c;
   --secondary-color: #4242df;
@@ -241,8 +242,9 @@ a {
 .listingDetailsHeader p {
   padding-top: 2rem;
   text-align: center;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-weight: 400;
+  font-family: "Dancing Script";
+  font-size: 20rem;
+  font-weight: 600;
   font-size: 2rem;
 }
 #bookingDetailsContainer {
@@ -269,10 +271,14 @@ a {
 #listingsContainerTitle {
   opacity: 0.9;
   padding: 1rem;
+  font-size: 3rem;
   color: black;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Dancing Script";
+  font-weight: 700;
 }
-#searchContainer {
+#searchFilterContainer {
+  display: flex;
+  justify-content: center;
   margin: auto;
   margin-bottom: 1rem;
 }
@@ -297,7 +303,15 @@ a {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 1.2rem;
 }
-
+.seeHomeDetails {
+  /* background-color: var(--main-color); */
+}
+.filterBtn {
+  /* background-color: var(--main-color); */
+  width: 10rem;
+  padding: 10px;
+  margin: 2rem;
+}
 footer {
   display: flex;
   background-color: black;
@@ -324,4 +338,24 @@ footer {
 }
 #errorPageContainer h5 {
   color: var(--main-color);
+}
+
+/* ***************FILTER NAV***************** */
+select,
+option {
+  width: 5rem;
+  padding: 7px;
+  margin: 5px;
+}
+#propertyTypeSelect {
+  width: 8rem;
+}
+label {
+  margin: 5px;
+}
+.checkboxInput {
+  width: 20px;
+  height: 20px;
+  order: 2px solid #ccc;
+  margin-right: 5px;
 }

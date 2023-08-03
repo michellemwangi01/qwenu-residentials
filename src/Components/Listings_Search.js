@@ -39,7 +39,7 @@ const Listings_Search = () => {
       <div>
         <Form id="searchid">
           <Row className="align-items-center">
-            <Col xs="auto">
+            <Col>
               <Form.Label htmlFor="inlineFormInput" visuallyHidden>
                 Name
               </Form.Label>
