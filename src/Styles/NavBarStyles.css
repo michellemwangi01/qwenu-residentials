@@ -31,6 +31,10 @@ table {
   width: 80%;
   margin: auto;
   margin-top: 2rem;
+  margin-bottom: 3rem;
+  border: 1px var(--main-color) solid;
+  padding: 20px;
+  border-radius: 25px;
 }
 tbody tr:nth-child(odd) {
   background-color: var(--main-color);
@@ -44,7 +48,7 @@ thead tr td {
   background-color: var(--main-color);
   padding: 20px;
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
@@ -89,16 +93,20 @@ small {
 #agencyDetails p {
   font-size: 20px;
 }
+.card-title-Details {
+  margin: 1.5rem;
+}
 #propertyDetails-Tag {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  width: 50%;
+  width: 60%;
   margin: auto;
   margin-top: 20px;
 }
 #propertyDetails-Tag p {
   font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
 }
 #bookPropertyBtn {
   background-color: var(--main-color);
@@ -210,9 +218,15 @@ a {
   margin: 20px;
   height: 40rem;
 }
-.listingDetailsHeader h1 {
+.listingDetailsHeader p {
+  padding-top: 2rem;
   text-align: center;
   font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 2rem;
+}
+#bookingDetailsContainer {
+  align-items: center;
 }
 .listingDetailsContainer {
   width: 90%;
@@ -240,4 +254,6 @@ a {
 }
 .list-group-item {
   border: none;
+}
+.componentContainer {
 }
