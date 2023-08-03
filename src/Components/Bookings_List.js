@@ -3,17 +3,17 @@ import Booking from "./Booking";
 import { listingsDataContext } from "./FetchAPIData";
 import "../Styles/NavBarStyles.css";
 
-const Bookings__List = ({ renderDb }) => {
+const Bookings__List = () => {
   const { bookingsData } = useContext(listingsDataContext);
   const [bookings, setBookings] = useState([]);
 
   console.log(bookingsData);
 
   useEffect(() => {
-    if (bookingsData) {
-      setBookings(bookingsData);
-    } else if (!bookingsData) {
+    if (!bookingsData) {
       return <h1>Loading...</h1>;
+    } else {
+      setBookings(bookingsData);
     }
   }, [bookingsData]);
 
@@ -27,41 +27,10 @@ const Bookings__List = ({ renderDb }) => {
 
   //***********************************COLUMN SORTING******************************************* */
   const [data, setData] = useState([]);
-  const [sortClicked, setSortClicked] = useState(false);
 
   useEffect(() => {
     setData(bookings);
   }, [bookings]);
-
-  const [sortSetting, setSortSetting] = useState({
-    key: null,
-    direction: null,
-  });
-
-  const handleSort = (key) => {
-    setSortClicked(!sortClicked);
-    let direction = "ascending";
-    if (sortSetting.key === key && sortSetting.direction === "ascending") {
-      direction = "descending";
-    }
-
-    const sortedData = [...data].sort((a, b) => {
-      if (a[key] < b[key]) {
-        return direction === "ascending" ? -1 : 1;
-      }
-      if (a[key] > b[key]) {
-        return direction === "ascending" ? 1 : -1;
-      }
-      return 0;
-    });
-
-    setData(sortedData);
-    setSortSetting({ key, direction });
-  };
-
-  useEffect(() => {
-    setBookings(data);
-  }, [sortClicked]);
 
   //****************************************************************************** */
 
@@ -84,22 +53,8 @@ const Bookings__List = ({ renderDb }) => {
         <thead className="thead-dark">
           <tr>
             <td>Property ID</td>
-            <td>
-              Name
-              <i
-                onClick={() => handleSort("category")}
-                className="fas fa-sort fa-lg"
-                style={{ color: "#28a745" }}
-              ></i>
-            </td>
-            <td>
-              Email
-              <i
-                onClick={() => handleSort("description")}
-                className="fas fa-sort fa-lg"
-                style={{ color: "#28a745" }}
-              ></i>
-            </td>
+            <td>Name</td>
+            <td>Email</td>
             <td>Title</td>
             <td>Date</td>
             <td>
