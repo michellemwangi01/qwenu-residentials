@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import "../Styles/FormStyles.css";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import { listingsDataContext } from "./FetchAPIData";
+import { toast } from "react-toastify";
 
 const Listing_Booking = ({ propertyLocation, propertyTitle, propertyID }) => {
   const initialBookingState = {
@@ -18,9 +19,9 @@ const Listing_Booking = ({ propertyLocation, propertyTitle, propertyID }) => {
   const Navigate = useNavigate();
   const [newBooking, setNewBooking] = useState(initialBookingState);
 
-  // if (!bookingsData) {
-  //   return <p>data loading...</p>;
-  // }
+  if (!bookingsData) {
+    return <p>data loading...</p>;
+  }
 
   function submitHandler(e) {
     e.preventDefault();
@@ -36,8 +37,10 @@ const Listing_Booking = ({ propertyLocation, propertyTitle, propertyID }) => {
         console.log("post Successful:", data);
         setNewBooking(initialBookingState);
         setBookingsData([...bookingsData, newBooking]);
+
         Navigate("/bookings");
       });
+    toastSuccessfulBooking();
   }
 
   const inputHandler = (e) => {
@@ -48,6 +51,13 @@ const Listing_Booking = ({ propertyLocation, propertyTitle, propertyID }) => {
     }));
   };
 
+  const toastSuccessfulBooking = () =>
+    toast(
+      `Your booking has been made successfully! Please wait as you are redirected...`,
+      {
+        type: "sucsess",
+      }
+    );
   return (
     <form id="addTransaction">
       <fieldset id="IdentityKinInfo" class="row g-3 scheduler-border">
@@ -177,8 +187,8 @@ const Listing_Booking = ({ propertyLocation, propertyTitle, propertyID }) => {
         </div>
 
         <p>
-          *Once added, the property is booked, the details can be viewed in the
-          booking list on the home page. list below.
+          *Once the property is booked, you will be redirected to the bookings
+          page where you can view the details of your booking.
         </p>
         <button
           // to="/bookings/"

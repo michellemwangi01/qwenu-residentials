@@ -9,14 +9,14 @@ const Booking = ({ booking, onDeletebooking }) => {
 
   return (
     <tr key={booking.id}>
-      <td>{booking.propertyID}</td>
-      <td>{booking.Location}</td>
+      <td>#{booking.propertyID}</td>
       <td>{booking.FullNames} </td>
       <td>{booking.Email}</td>
+      <td>{booking.Location}</td>
       <td>{booking.HouseTitle}</td>
       <td>{booking.DateofOccupancy}</td>
       <td onClick={deletebookingHandler} id={booking.id}>
-        <i class="fa fa-trash-o" style={{ color: "#0c0c4c" }}></i>
+        <i class="fa fa-trash-o"></i>
       </td>
     </tr>
   );

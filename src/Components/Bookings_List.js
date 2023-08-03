@@ -4,19 +4,14 @@ import { listingsDataContext } from "./FetchAPIData";
 import "../Styles/NavBarStyles.css";
 
 const Bookings__List = () => {
-  const { bookingsData } = useContext(listingsDataContext);
-  const [bookings, setBookings] = useState([]);
+  const { bookingsData, setBookingsData } = useContext(listingsDataContext);
   console.log(bookingsData);
 
-  useEffect(() => {
-    if (!bookingsData) {
-      return <h1>Loading...</h1>;
-    } else {
-      setBookings(bookingsData);
-    }
-  }, [bookingsData]);
+  if (!bookingsData) {
+    return <h1>Data Loading...</h1>;
+  }
 
-  const bookingList = bookings
+  const bookingList = bookingsData
     .slice()
     .reverse()
     .map((booking) => (
@@ -27,22 +22,16 @@ const Bookings__List = () => {
       />
     ));
 
-  //***********************************COLUMN SORTING******************************************* */
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    setData(bookings);
-  }, [bookings]);
-
   //****************************************************************************** */
 
   function deleteBooking(id) {
     fetch(`https://db-qwenuresidentials.onrender.com/bookings/${id}`, {
       method: "DELETE",
     }).then(() => {
-      const newBookingList = bookings.filter((booking) => booking.id !== id);
-      setBookings(newBookingList);
-      setData(newBookingList); // Update sorted data as well
+      const newBookingList = bookingsData.filter(
+        (booking) => booking.id !== id
+      );
+      setBookingsData(newBookingList);
     });
   }
 
@@ -51,13 +40,13 @@ const Bookings__List = () => {
       {/* <table className=" striped-table table-responsive table table-hover"> */}
 
       <h1>Property Bookings</h1>
-      <table className="table-responsive table-hover">
+      <table className="table-responsive">
         <thead className="thead-dark">
           <tr>
             <td>Property ID</td>
-            <td>Location</td>
             <td>Name</td>
             <td>Email</td>
+            <td>Location</td>
             <td>Title</td>
             <td>Date</td>
             <td>
