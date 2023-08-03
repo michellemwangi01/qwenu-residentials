@@ -11,7 +11,7 @@ const FilterNav = ({ showModal, onClose }) => {
   const [minPrice, setMinPrice] = useState(9999);
   const [maxPrice, setMaxPrice] = useState(1000000000);
   const [filteredData, setFilteredData] = useState([]);
-  const { listingsData, setListingData } = useContext(listingsDataContext);
+  const { listingsData, setListingsData } = useContext(listingsDataContext);
   const [showFilterNav, setShowFilterNav] = useState(false);
 
   const toggleFilterNav = () => {
@@ -35,7 +35,7 @@ const FilterNav = ({ showModal, onClose }) => {
       );
     });
     console.log(filteredListings);
-    setListingData(filteredListings);
+    setListingsData(filteredListings);
     onClose();
   };
 

@@ -32,7 +32,7 @@ function Listings() {
             <FilterNav showModal={showFilterNav} onClose={toggleFilterNav} />
           )}
 
-          <h1 id="listingsContainerTitle">Explore</h1>
+          <h1 id="listingsContainerTitle">Explore Fine Living in the UAE</h1>
           <div>
             {/* Filter Modal */}
             <button

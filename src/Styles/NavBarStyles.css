@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel&family=Cormorant+Garamond:wght@300&family=Dancing+Script&family=IBM+Plex+Serif:wght@300&family=Kalam:wght@300&family=Satisfy&family=Ysabeau+Infant:ital,wght@1,300&display=swap");
 :root {
   --main-color: #0c0c4c;
   --secondary-color: #4242df;
@@ -269,8 +270,10 @@ a {
 #listingsContainerTitle {
   opacity: 0.9;
   padding: 1rem;
+  font-size: 3rem;
   color: black;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Dancing Script";
+  font-weight: 700;
 }
 #searchFilterContainer {
   display: flex;
