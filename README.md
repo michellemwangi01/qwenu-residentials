@@ -9,7 +9,7 @@ This repository contains a GitHub collaboration Project submission.
 - [Technology Used](https://github.com/michellemwangi01/qwenu-residentials/tree/ft-filternav#technologies-used)
 - [Project Structure](https://github.com/michellemwangi01/qwenu-residentials/tree/ft-filternav#project-structure)
 - [License](https://github.com/michellemwangi01/qwenu-residentials/tree/ft-filternav#license)
-- [Acknowledgements](
+- [Acknowledgements](https://github.com/michellemwangi01/qwenu-residentials/tree/ft-filternav#acknowledgements)
 - [Authors Info](https://github.com/michellemwangi01/qwenu-residentials/tree/ft-filternav#author-info)
 - [Collaborators](https://github.com/michellemwangi01/qwenu-residentials/tree/ft-filternav#collaborators)
 
