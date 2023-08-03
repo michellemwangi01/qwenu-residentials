@@ -20,8 +20,8 @@ const FetchAPIData = ({ children }) => {
       .then((res) => res.json())
       .then((data) => setListingsData(data));
   }, []);
-  console.log(listingsData);
-  const values = { listingsData };
+  // console.log(listingsData);
+  const values = { listingsData, setListingData };
 
   return (
     <div>

@@ -14,17 +14,11 @@ const NavBar = () => {
   };
 
   useEffect(() => {
-    // Apply initial filters if needed
     applyFilters();
-  }, []); // Empty dependency array to run this effect only once on component mount
+  }, []);
 
   // Function to apply filters and update filtered data
   const applyFilters = () => {
-    // Filter the listingsData based on the selected filters
-    // Implement your filtering logic here based on the FilterNav state variables
-    // ...
-
-    // For now, let's just show all listings
     setFilteredData(listingsData);
   };
 
@@ -56,26 +50,26 @@ const NavBar = () => {
             </NavLink>
           </li>
           <li className="navLinks">
-            <button
+            {/* <button
               onClick={toggleFilterNav}
               className="btn btn-primary"
               id="filterBtn"
             >
               Filter Listings
-            </button>
+            </button> */}
           </li>
         </ul>
       </div>
 
       {/* Filter Modal */}
-      {showFilterNav && (
+      {/* {showFilterNav && (
         <FilterNav
           showModal={showFilterNav}
           onClose={toggleFilterNav}
           listingsData={listingsData}
           setFilteredData={setFilteredData}
         />
-      )}
+      )} */}
     </nav>
   );
 };
