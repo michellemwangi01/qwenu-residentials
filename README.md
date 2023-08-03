@@ -1,16 +1,17 @@
 ## Qwenu Apartments
 This repository contains a GitHub collaboration Project submission.
 ## Table of Content
-- [Description]
-- [Features]
-- [Installation Requirements]
-- [Installation Process]
-- [Technology Used]
-- [Project Structure]
-- [License]
-- [Acknowledgements]
-- [Authors Info]
-- [Collaborators]
+- [Description](https://github.com/michellemwangi01/qwenu-residentials/tree/ft-filternav#description)
+- [Features](https://github.com/michellemwangi01/qwenu-residentials/tree/ft-filternav#features)
+- [Installation Requirements](https://github.com/michellemwangi01/qwenu-residentials/tree/ft-filternav#installation-requirements)
+- [Installation Process](https://github.com/michellemwangi01/qwenu-residentials/tree/ft-filternav#installation-process)
+- [Getting Started](https://github.com/michellemwangi01/qwenu-residentials/tree/ft-filternav#installation-process)
+- [Technology Used](https://github.com/michellemwangi01/qwenu-residentials/tree/ft-filternav#technologies-used)
+- [Project Structure](https://github.com/michellemwangi01/qwenu-residentials/tree/ft-filternav#project-structure)
+- [License](https://github.com/michellemwangi01/qwenu-residentials/tree/ft-filternav#license)
+- [Acknowledgements](
+- [Authors Info](https://github.com/michellemwangi01/qwenu-residentials/tree/ft-filternav#author-info)
+- [Collaborators](https://github.com/michellemwangi01/qwenu-residentials/tree/ft-filternav#collaborators)
 
 ## Description
 Qwenu Apartments allows the user to Rent or Purchase a property in the United Arab Emirates through a wide pool of high-end listings.
@@ -147,12 +148,16 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+## Acknowledgements
+Special thanks to Bootstrap Libraries and React for their excellent documentation and resources
+
 ## Author info
 [Michelle Mwangi](https://github.com/michellemwangi01)
-## Collaborators
-- Kennedy Mutuku
-- Michael Owiti
-- Gathirimu Mwasigwa
-- Edmond Wanyama
 
-[**Navigate back to top**]()
+## Collaborators
+- [Kennedy Mutuku](https://github.com/kentechcomps)
+- [Michael Owiti](https://github.com/michaelowiti)
+- [Gathirimu Mwasigwa](https://github.com/Mwasigwa2)
+- [Edmond Wanyama](https://github.com/wanyama23)
+
+[**NAVIGATE BACK TO TOP**](https://github.com/michellemwangi01/qwenu-residentials/tree/ft-filternav#qwenu-apartments)
