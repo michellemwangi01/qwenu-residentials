@@ -32,7 +32,7 @@ function App() {
         <NavBar />
         <FilterNav />
         <RouterComponent />
-        <Footer />
+        {/* <Footer /> */}
       </FetchAPIData>
     </div>
     </>
