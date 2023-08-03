@@ -7,7 +7,6 @@ import Listings_Search from "./Listings_Search";
 const Listings_Home = () => {
   return (
     <div className="listingsHome">
-      <NavBar />
       <LandingPage />
      
     </div>

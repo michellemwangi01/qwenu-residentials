@@ -5,9 +5,11 @@ import Listing_Details from "./Listing_Details";
 import { createContext } from "react";
 
 export const listingsDataContext = createContext();
+// export const bookingsDataContext = createContext();
+
 const FetchAPIData = ({ children }) => {
   const [listingsData, setListingsData] = useState([]);
-  const [listingData, setListingData] = useState({});
+  const [bookingsData, setBookingsData] = useState({});
 
   useEffect(() => {
     fetch("https://db-qwenuresidentials.onrender.com/listings", {
@@ -20,6 +22,7 @@ const FetchAPIData = ({ children }) => {
       .then((res) => res.json())
       .then((data) => setListingsData(data));
   }, []);
+  console.log(listingsData);
   const values = { listingsData };
 
   return (

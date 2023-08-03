@@ -1,12 +1,15 @@
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Listings from "./Listings";
+import { listingsDataContext } from "./FetchAPIData";
+import { useContext } from "react";
 
-const Listings_Search = ({ homes, sethome }) => {
-
+const Listings_Search = ({  sethome }) => {
+  
+  const { listingsData } = useContext(listingsDataContext);
 
   const [searchitem, setSearchitem] = useState('')
 
@@ -17,7 +20,7 @@ const Listings_Search = ({ homes, sethome }) => {
     e.preventDefault();
     setSearchitem(e.target.value);
     console.log(e.target.value);
-    const filteredData = homes.filter(item => {
+    const filteredData = listingsData .filter(item => {
       return item.title.toLowerCase().includes(searchitem.toLowerCase())})
       sethome(filteredData)
   };
@@ -52,7 +55,7 @@ const Listings_Search = ({ homes, sethome }) => {
                 Name
               </Form.Label>
 
-              <input type="text" onChange={handleSearchChange} placeholder="searchhere"></input>
+              <input id= "searchinput" type="text" onChange={handleSearchChange} placeholder="searchhere"></input>
               {/* <Form.Control
           className="mb-2"
           id="inlineFormInput"
@@ -61,13 +64,7 @@ const Listings_Search = ({ homes, sethome }) => {
           onChange = {handleSearchChange}
         /> */}
             </Col>
-            <Col xs="auto">
-              <Button type="submit" className="mb-2"
-              
-              >
-                Search
-              </Button>
-            </Col>
+            
           </Row>
         </Form>
       </div>
