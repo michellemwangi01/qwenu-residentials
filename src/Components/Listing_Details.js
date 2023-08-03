@@ -14,10 +14,6 @@ const Listing_Details = () => {
   const [listingData, setListingData] = useState({});
   const { listingsData, bookingsData } = useContext(listingsDataContext);
   const [formToggler, setFormToggler] = useState(false);
-  // const [addTransactionBtnText, setAddTransactionBtnText] =
-  //   useState("Book Property");
-
-  // const [bookingsDataArray, setBookingsDataArray] = useC;
 
   if (!bookingsData || !listingsData) {
     return <h1>Loading...</h1>;

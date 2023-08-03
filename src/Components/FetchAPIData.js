@@ -20,18 +20,13 @@ const FetchAPIData = ({ children }) => {
   }, []);
   console.log(listingsData);
 
-  const values = { listingsData };
+  useEffect(() => {
+    fetch("https://db-qwenuresidentials.onrender.com/bookings")
+      .then((res) => res.json())
+      .then((data) => setBookingsData(data));
+  }, []);
 
-
-//   useEffect(() => {
-//     fetch("https://db-qwenuresidentials.onrender.com/bookings")
-//       .then((res) => res.json())
-//       .then((data) => setBookingsData(data));
-//   }, []);
-
-//   // console.log(bookingsData);
-//   const values = { bookingsData, listingsData, setBookingsData };
-
+  const values = { bookingsData, listingsData, setBookingsData };
 
   return (
     <div>

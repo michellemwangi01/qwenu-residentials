@@ -24,10 +24,9 @@ function Listings() {
     <>
       <div>
         <h1 id="listingsContainerTitle">Explore</h1>
-        <Listings_Search
-         sethome={setHomes}
-        
-        />
+        <div id="searchContainer">
+          <Listings_Search sethome={setHomes} />
+        </div>
         {homes ? (
           <div className="listingsContainer">{homesList}</div>
         ) : (

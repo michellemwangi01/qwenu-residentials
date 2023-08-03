@@ -251,15 +251,29 @@ a {
   color: black;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
-#searchform{
+#searchContainer {
+  margin: auto;
+  margin-bottom: 1rem;
+}
+.align-items-center {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+#searchform {
   width: 500px;
   height: 50px;
-  margin-left: 300px;
-  margin-bottom: 40px;
+  margin: auto;
 }
-#searchinput{
+#searchinput {
   width: 400px;
   height: 50px;
+  margin: auto;
+  text-align: center;
+  border: 2px var(--main-color) solid;
+  color: var(--main-color);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.2rem;
 }
 
 footer {
