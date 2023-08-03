@@ -9,14 +9,7 @@ function Listings() {
   const [homes, setHomes] = useState(listingsData);
   const [dataLoaded, setDataLoaded] = useState(false);
 
-  // useEffect(() => {
-  //   fetch(" https://db-qwenuresidentials.onrender.com/listings")
-  //     .then((resp) => resp.json())
-  //     .then((homes) => setHomes(homes))
-  //     .finally(setDataLoaded(true));
-  // }, []);
-  console.log(homes);
-  const homesList = homes.map((home) => (
+  const homesList = listingsData.map((home) => (
     <ListingCards key={home.id} home={home} />
   ));
 
@@ -25,9 +18,9 @@ function Listings() {
       <div>
         <h1 id="listingsContainerTitle">Explore</h1>
         <div id="searchContainer">
-          <Listings_Search sethome={setHomes} />
+          <Listings_Search />
         </div>
-        {homes ? (
+        {listingsData ? (
           <div className="listingsContainer">{homesList}</div>
         ) : (
           <h1>Data Loading...Please be patient</h1>

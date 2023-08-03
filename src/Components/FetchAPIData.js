@@ -26,7 +26,12 @@ const FetchAPIData = ({ children }) => {
       .then((data) => setBookingsData(data));
   }, []);
 
-  const values = { bookingsData, listingsData, setBookingsData };
+  const values = {
+    bookingsData,
+    listingsData,
+    setBookingsData,
+    setListingsData,
+  };
 
   return (
     <div>

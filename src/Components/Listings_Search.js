@@ -7,8 +7,8 @@ import Listings from "./Listings";
 import { listingsDataContext } from "./FetchAPIData";
 import { useContext } from "react";
 
-const Listings_Search = ({ sethome }) => {
-  const { listingsData } = useContext(listingsDataContext);
+const Listings_Search = () => {
+  const { listingsData, setListingsData } = useContext(listingsDataContext);
 
   const [searchitem, setSearchitem] = useState("");
 
@@ -31,22 +31,8 @@ const Listings_Search = ({ sethome }) => {
         item.contactName.toLowerCase().includes(searchitem.toLowerCase())
       );
     });
-    sethome(filteredData);
+    setListingsData(filteredData);
   };
-
-  // const handleSearch = (e) => {
-  //   e.preventDefault();
-
-  //   console.log(searchitem);
-  //   console.log("String " , homes);
-  //   const filteredData = homes.filter(item => {
-  //     return item.title.toLowerCase().includes(searchitem.toLowerCase())
-  //   //  const checkeddata = item.location.filter((item) => item.name.toLowerCase().includes(searchitem.toLowerCase()))
-  //   //  return checkeddata.length > 0
-  //   })
-  //   console.log("Filteredata" , filteredData);
-
-  // }
 
   return (
     <div id="searchform">
