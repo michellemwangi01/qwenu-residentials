@@ -94,3 +94,4 @@ const ListingCards = ({ home }) => {
 };
 
 export default ListingCards;
+
