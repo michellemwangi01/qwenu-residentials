@@ -3,7 +3,7 @@ import RouterComponent from "./Components/RouterComponent";
 import NavBar from "./Components/NavBar";
 import FetchAPIData from "./Components/FetchAPIData";
 import Footer from "./Components/Footer";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function App() {
