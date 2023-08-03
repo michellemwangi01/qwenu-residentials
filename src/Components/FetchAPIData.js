@@ -5,23 +5,35 @@ import Listing_Details from "./Listing_Details";
 import { createContext } from "react";
 
 export const listingsDataContext = createContext();
+// export const bookingsDataContext = createContext();
+
 const FetchAPIData = ({ children }) => {
   const [listingsData, setListingsData] = useState([]);
-  const [listingData, setListingData] = useState({});
+  const [bookingsData, setBookingsData] = useState([]);
 
   useEffect(() => {
     fetch("https://db-qwenuresidentials.onrender.com/listings", {
       method: "GET",
-      // headers: {
-      //   "X-RapidAPI-Key": "47f6ed740fmsh71585dcfcf20c8bp1af58fjsnd4a08f796f4f",
-      //   "X-RapidAPI-Host": "bayut.p.rapidapi.com",
-      // },
     })
       .then((res) => res.json())
       .then((data) => setListingsData(data));
   }, []);
-  // console.log(listingsData);
-  const values = { listingsData, setListingData };
+
+  console.log(listingsData);
+
+  useEffect(() => {
+    fetch("https://db-qwenuresidentials.onrender.com/bookings")
+      .then((res) => res.json())
+      .then((data) => setBookingsData(data));
+  }, []);
+
+  const values = {
+    bookingsData,
+    listingsData,
+    setBookingsData,
+    setListingsData,
+  };
+
 
   return (
     <div>

@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import { NavLink, Outlet } from "react-router-dom";
-import { listingsDataContext } from "./FetchAPIData";
+
 import "../Styles/NavBarStyles.css";
 import FilterNav from "./FilterNav";
 
@@ -23,54 +23,35 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="navBarComponent">
-      <div>
-        <a id="QwenuLogo">Qwenu Residentials</a>
-      </div>
-      <div id="navLinksContainer">
-        <ul>
-          <li className="navLinks">
-            <NavLink exact to="/">
-              Home
-            </NavLink>
-          </li>
-          <li className="navLinks">
-            <NavLink exact to="homelistings">
-              Home Listings
-            </NavLink>
-          </li>
-          <li className="navLinks">
-            <NavLink exact to="houseDetails">
-              Details
-            </NavLink>
-          </li>
-          <li className="navLinks">
-            <NavLink exact to="contacts">
-              Contacts
-            </NavLink>
-          </li>
-          <li className="navLinks">
-            {/* <button
-              onClick={toggleFilterNav}
-              className="btn btn-primary"
-              id="filterBtn"
-            >
-              Filter Listings
-            </button> */}
-          </li>
-        </ul>
-      </div>
 
-      {/* Filter Modal */}
-      {/* {showFilterNav && (
-        <FilterNav
-          showModal={showFilterNav}
-          onClose={toggleFilterNav}
-          listingsData={listingsData}
-          setFilteredData={setFilteredData}
-        />
-      )} */}
-    </nav>
+    <>
+      <nav className="navBarComponent">
+        <div>
+          <div>
+            <a id="QwetuLogo">Qwenu Residentials</a>
+          </div>
+          <div id="navLinksContainer">
+            <ul>
+              <li className="navLinks">
+                <NavLink exact to="qwenu-residentials">
+                  Home
+                </NavLink>
+              </li>
+              <li className="navLinks">
+                <NavLink exact to="homelistings">
+                  Properties
+                </NavLink>
+              </li>
+              <li className="navLinks">
+                <NavLink exact to="bookings">
+                  Bookings
+                </NavLink>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </>
   );
 };
 

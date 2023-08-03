@@ -1,6 +1,8 @@
 import React from "react";
 
 const LandingPage = () => {
+  const filterPropertiesForRent = () => {};
+  const filterPropertiesForSale = () => {};
   return (
     <div id="landingPage">
       <div id="landingPageContent">
@@ -12,8 +14,8 @@ const LandingPage = () => {
           real estate experience.
         </h4>
         <div id="landingCallToAction">
-          <button>Rent</button>
-          <button>Sale</button>
+          <button onClick={filterPropertiesForRent}>Rent</button>
+          <button onClick={filterPropertiesForSale}>Sale</button>
         </div>
       </div>
     </div>

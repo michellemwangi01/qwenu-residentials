@@ -7,18 +7,130 @@
   font-size: 2rem;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
+#navLinksContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
 #navLinksContainer ul {
   display: flex;
   align-items: center;
 }
+.invisible-input {
+  display: none;
+}
+table {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
+}
+.componentContainer {
+  display: flex;
+  flex-direction: column;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 500;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  border: 1px var(--main-color) solid;
+  padding: 20px;
+  border-radius: 25px;
+}
+tbody tr:nth-child(odd) {
+  background-color: var(--main-color);
+  opacity: 0.8;
+  color: white;
+}
+tbody tr td {
+  padding: 10px;
+}
+thead tr td {
+  background-color: var(--main-color);
+  padding: 20px;
+  color: white;
+  font-size: 1.5rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+#propertyBookedNotification {
+  position: absolute;
+  font-size: 12rem;
+  color: red;
+  opacity: 0.5;
+  transform: rotate(-30deg);
+  z-index: 10;
+  top: 25%;
+  left: 10%;
+}
+.disabled-btn-book {
+  background-color: red;
+  color: white;
+}
+#agencyDetails {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+#agencyDetails img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin: 10px;
+}
+.card-text-amenities {
+  font-size: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+em {
+  font-weight: bold;
+  font-style: normal;
+}
+small {
+  font-size: 20px;
+}
+#agencyDetails p {
+  font-size: 20px;
+}
+.card-title-Details {
+  margin: 1.5rem;
+}
+#propertyDetails-Tag {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 60%;
+  margin: auto;
+  margin-top: 20px;
+}
+#propertyDetails-Tag p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
+}
 #bookPropertyBtn {
   background-color: var(--main-color);
   margin-bottom: 1rem;
+  padding: 1rem;
+  width: 40%;
 }
-.navBarComponent {
+#listingDetailsComponent {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  width: 90%;
+}
+.navBarComponent div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 80%;
+  margin: auto;
+}
+.navBarComponent {
   padding: 0.2rem;
   background-color: rgba(12, 25, 104, 0.8);
   color: whitesmoke;
@@ -26,8 +138,9 @@
 }
 .navBarComponent div ul li {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
 }
+
 .navLinks {
   list-style: none;
 }
@@ -44,11 +157,11 @@ a {
 }
 .listingsHome {
   height: 95vh;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
       rgba(24, 24, 141, 0.5),
       rgba(24, 24, 141, 0.5)
     ),
-    url("/src/Images/bgHome.jpg");
+    url("/src/Images/bgHome.jpg"); */
 }
 #landingPage h1 {
   color: white;
@@ -80,6 +193,11 @@ a {
 
   margin-top: 3rem;
 }
+.listingDetailsCard {
+  width: 70%;
+  margin: auto;
+  height: 700px;
+}
 
 #listingDetails h1 {
   margin-top: 0.5rem;
@@ -100,9 +218,15 @@ a {
   margin: 20px;
   height: 40rem;
 }
-.listingDetailsHeader h1 {
+.listingDetailsHeader p {
+  padding-top: 2rem;
   text-align: center;
   font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 2rem;
+}
+#bookingDetailsContainer {
+  align-items: center;
 }
 .listingDetailsContainer {
   width: 90%;
@@ -115,14 +239,69 @@ a {
 .listingsContainer {
   margin-top: 2rem;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   flex-direction: row;
   margin: auto;
-  width: 80%;
+  width: 90%;
 }
 #listingsContainerTitle {
   opacity: 0.9;
   margin: 1rem;
   color: black;
   font-family: Georgia, "Times New Roman", Times, serif;
+}
+#searchContainer {
+  margin: auto;
+  margin-bottom: 1rem;
+}
+.align-items-center {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+#searchform {
+  width: 500px;
+  height: 50px;
+  margin: auto;
+}
+
+#searchinput {
+  width: 400px;
+  height: 50px;
+  margin: auto;
+  text-align: center;
+  border: 2px var(--main-color) solid;
+  color: var(--main-color);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.2rem;
+}
+
+footer {
+  display: flex;
+  background-color: black;
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  margin-left: 20px;
+  margin-right: 40px;
+  margin-top: 100px;
+  justify-content: space-between;
+}
+
+.icons {
+  gap: 30px;
+}
+
+.icons i {
+  margin-right: 30px; /* Adjust the margin value as desired */
+  margin-top: 30px;
+}
+#errorPageContainer h1 {
+  font-size: 5rem;
+  margin: 5rem;
+  color: var(--main-color);
+}
+#errorPageContainer h5 {
+  color: var(--main-color);
 }
