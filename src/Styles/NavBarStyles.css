@@ -244,7 +244,7 @@ a {
 footer{
   
   display: flex;
-  background-color: black;
+  background-color:white;
   box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
   rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
   margin-left: 20px;
@@ -261,5 +261,5 @@ footer{
 
 .icons i {
 margin-right: 30px; /* Adjust the margin value as desired */
-margin-top: 30px;
+margin-top: 80px;
 }
