@@ -175,6 +175,11 @@ a {
 
   margin-top: 3rem;
 }
+.listingDetailsCard {
+  width: 70%;
+  margin: auto;
+  height: 700px;
+}
 
 #listingDetails h1 {
   margin-top: 0.5rem;
@@ -220,4 +225,7 @@ a {
   margin: 1rem;
   color: black;
   font-family: Georgia, "Times New Roman", Times, serif;
+}
+.list-group-item {
+  border: none;
 }
