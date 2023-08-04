@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const ListingCards = ({ home }) => {
-  console.log(home);
+  // console.log(home);
   return (
     <div
       class="card"
@@ -20,7 +20,7 @@ const ListingCards = ({ home }) => {
         src={home.coverPhoto.url}
         class="card-img-top"
         alt={home.state}
-        style={{ height: "250px" }}
+        style={{ minHeight: "250px" }}
       />
       <div class="card-body">
         <h5 class="card-title">
@@ -30,7 +30,7 @@ const ListingCards = ({ home }) => {
         </h5>
         <p class="card-text">{home.title}</p>
       </div>
-      <ul class="list-group list-group-flush">
+      <ul class="list-group list-group-flush" style={{ border: "none" }}>
         <li
           class="list-group-item"
           style={{ borderBottom: "1px solid", color: "blue", fontSize: "25px" }}

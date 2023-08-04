@@ -11,6 +11,7 @@
   display: flex;
   justify-content: flex-end;
 }
+
 #navLinksContainer ul {
   display: flex;
   align-items: center;
@@ -31,6 +32,10 @@ table {
   width: 80%;
   margin: auto;
   margin-top: 2rem;
+  margin-bottom: 3rem;
+  border: 1px var(--main-color) solid;
+  padding: 20px;
+  border-radius: 25px;
 }
 tbody tr:nth-child(odd) {
   background-color: var(--main-color);
@@ -44,7 +49,7 @@ thead tr td {
   background-color: var(--main-color);
   padding: 20px;
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
@@ -89,16 +94,20 @@ small {
 #agencyDetails p {
   font-size: 20px;
 }
+.card-title-Details {
+  margin: 1.5rem;
+}
 #propertyDetails-Tag {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  width: 50%;
+  width: 60%;
   margin: auto;
   margin-top: 20px;
 }
 #propertyDetails-Tag p {
   font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
 }
 #bookPropertyBtn {
   background-color: var(--main-color);
@@ -209,9 +218,15 @@ a {
   margin: 20px;
   height: 40rem;
 }
-.listingDetailsHeader h1 {
+.listingDetailsHeader p {
+  padding-top: 2rem;
   text-align: center;
   font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 2rem;
+}
+#bookingDetailsContainer {
+  align-items: center;
 }
 .listingDetailsContainer {
   width: 90%;
@@ -237,28 +252,66 @@ a {
   color: black;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
-.list-group-item {
-  border: none;
+#searchContainer {
+  margin: auto;
+  margin-bottom: 1rem;
+}
+.align-items-center {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+#searchform {
+  width: 500px;
+  height: 50px;
+  margin: auto;
 }
 
-footer{
-  
+#searchinput {
+  width: 400px;
+  height: 50px;
+  margin: auto;
+  text-align: center;
+  border: 2px var(--main-color) solid;
+  color: var(--main-color);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.2rem;
+}
+
+footer {
   display: flex;
   background-color:aliceblue;
   box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+<<<<<<< HEAD
   rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
   padding:5rem;
+=======
+    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  margin-left: 20px;
+  margin-right: 40px;
+>>>>>>> 8bee8e9e5b4b67812e1479fc5e30ef5553c12517
   margin-top: 100px;
   justify-content: space-between;
-  
 }
 
-.icons{
+.icons {
   gap: 30px;
-  
-} 
+}
 
 .icons i {
+<<<<<<< HEAD
 margin-right: 30px; /* Adjust the margin value as desired */
 margin-top: 35px;
+=======
+  margin-right: 30px; /* Adjust the margin value as desired */
+  margin-top: 30px;
+}
+#errorPageContainer h1 {
+  font-size: 5rem;
+  margin: 5rem;
+  color: var(--main-color);
+}
+#errorPageContainer h5 {
+  color: var(--main-color);
+>>>>>>> 8bee8e9e5b4b67812e1479fc5e30ef5553c12517
 }

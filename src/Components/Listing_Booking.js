@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "../Styles/FormStyles.css";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
+import { listingsDataContext } from "./FetchAPIData";
+import { toast } from "react-toastify";
 
-const Listing_Booking = ({ propertyTitle, propertyID }) => {
+const Listing_Booking = ({ propertyLocation, propertyTitle, propertyID }) => {
   const initialBookingState = {
     propertyID: propertyID,
     HouseTitle: `${propertyTitle} - ${propertyID}`,
@@ -10,13 +12,20 @@ const Listing_Booking = ({ propertyTitle, propertyID }) => {
     Email: "",
     MobileNumber: "",
     DateofOccupancy: "",
+    Location: propertyLocation,
   };
 
+  const { bookingsData, setBookingsData } = useContext(listingsDataContext);
+  const Navigate = useNavigate();
   const [newBooking, setNewBooking] = useState(initialBookingState);
+
+  if (!bookingsData) {
+    return <p>data loading...</p>;
+  }
 
   function submitHandler(e) {
     e.preventDefault();
-    fetch("http://localhost:4000/bookings", {
+    fetch("https://db-qwenuresidentials.onrender.com/bookings", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -27,7 +36,11 @@ const Listing_Booking = ({ propertyTitle, propertyID }) => {
       .then((data) => {
         console.log("post Successful:", data);
         setNewBooking(initialBookingState);
+        setBookingsData([...bookingsData, newBooking]);
+
+        Navigate("/bookings");
       });
+    toastSuccessfulBooking();
   }
 
   const inputHandler = (e) => {
@@ -38,6 +51,13 @@ const Listing_Booking = ({ propertyTitle, propertyID }) => {
     }));
   };
 
+  const toastSuccessfulBooking = () =>
+    toast(
+      `Your booking has been made successfully! Please wait as you are redirected...`,
+      {
+        type: "sucsess",
+      }
+    );
   return (
     <form id="addTransaction">
       <fieldset id="IdentityKinInfo" class="row g-3 scheduler-border">
@@ -49,7 +69,7 @@ const Listing_Booking = ({ propertyTitle, propertyID }) => {
             id="Mobile"
             type="text"
             name="HouseTitle "
-            class="myformControl newCollectionDetails invisible-input"
+            class="invisible-input"
             aria-label="Sizing example input"
             aria-describedby=""
             readOnly
@@ -65,6 +85,22 @@ const Listing_Booking = ({ propertyTitle, propertyID }) => {
             id="Mobile"
             type="text"
             name="HouseTitle"
+            class="myformControl newCollectionDetails"
+            aria-label="Sizing example input"
+            aria-describedby=""
+            required
+          ></input>
+        </div>
+        <div class="transactionDetailInputDiv">
+          <span class="clientdeets" id="">
+            Location
+          </span>
+          <input
+            onChange={inputHandler}
+            value={newBooking.Location}
+            id="Mobile"
+            type="text"
+            name="Location"
             class="myformControl newCollectionDetails"
             aria-label="Sizing example input"
             aria-describedby=""
@@ -151,11 +187,11 @@ const Listing_Booking = ({ propertyTitle, propertyID }) => {
         </div>
 
         <p>
-          *Once added, the property is booked, the details can be viewed in the
-          booking list on the home page. list below.
+          *Once the property is booked, you will be redirected to the bookings
+          page where you can view the details of your booking.
         </p>
-        <Link
-          to="/bookings"
+        <button
+          // to="/bookings/"
           class="addTransactionBtn"
           onClick={submitHandler}
           id="submit"
@@ -168,8 +204,8 @@ const Listing_Booking = ({ propertyTitle, propertyID }) => {
             !newBooking.MobileNumber
           }
         >
-          Add
-        </Link>
+          Book
+        </button>
       </fieldset>
     </form>
   );
