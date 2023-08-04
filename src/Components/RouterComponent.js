@@ -10,9 +10,9 @@ const RouterComponent = () => {
     <div>
       <Routes>
         <Route exact path="qwenu-residentials" element={<Qwetu_Home />} />
-        <Route path="/homeListings/" element={<Listings />} />
-        <Route path="/homeListings/:externalID" element={<Listing_Details />} />
-        <Route path="/bookings/" element={<Bookings__List />} />
+        <Route path="homeListings" element={<Listings />} />
+        <Route path="homeListings/:externalID" element={<Listing_Details />} />
+        <Route path="bookings" element={<Bookings__List />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
     </div>
