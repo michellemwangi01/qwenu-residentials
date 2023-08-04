@@ -10,7 +10,7 @@ const ListingCards = ({ home }) => {
       style={{
         border: "1px solid #0c0c4c",
         width: "400px",
-        height: "580px",
+        height: "600px",
         margin: "10px",
         marginBottom: "15px",
       }}
