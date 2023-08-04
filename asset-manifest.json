@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/qwenu-residentials/static/css/main.92ecb733.css",
-    "main.js": "/qwenu-residentials/static/js/main.1f05540f.js",
+    "main.css": "/qwenu-residentials/static/css/main.ac9534d8.css",
+    "main.js": "/qwenu-residentials/static/js/main.67c0f9a1.js",
     "static/js/787.7598e91c.chunk.js": "/qwenu-residentials/static/js/787.7598e91c.chunk.js",
     "static/media/bgHome.jpg": "/qwenu-residentials/static/media/bgHome.2899f90fd74104b250de.jpg",
     "index.html": "/qwenu-residentials/index.html",
-    "main.92ecb733.css.map": "/qwenu-residentials/static/css/main.92ecb733.css.map",
-    "main.1f05540f.js.map": "/qwenu-residentials/static/js/main.1f05540f.js.map",
+    "main.ac9534d8.css.map": "/qwenu-residentials/static/css/main.ac9534d8.css.map",
+    "main.67c0f9a1.js.map": "/qwenu-residentials/static/js/main.67c0f9a1.js.map",
     "787.7598e91c.chunk.js.map": "/qwenu-residentials/static/js/787.7598e91c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.92ecb733.css",
-    "static/js/main.1f05540f.js"
+    "static/css/main.ac9534d8.css",
+    "static/js/main.67c0f9a1.js"
   ]
 }
