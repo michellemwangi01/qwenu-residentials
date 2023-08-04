@@ -1,6 +1,12 @@
-import React from "react";
-
+import React, { useContext } from "react";
+import { listingsDataContext } from "./FetchAPIData";
+import { useNavigate } from "react-router";
 const LandingPage = () => {
+  const Navigate = useNavigate();
+  const filterPropertiesForRent = () => {
+    Navigate("/homelistings");
+  };
+
   return (
     <div id="landingPage">
       <div id="landingPageContent">
@@ -12,8 +18,7 @@ const LandingPage = () => {
           real estate experience.
         </h4>
         <div id="landingCallToAction">
-          <button>Rent</button>
-          <button>Sale</button>
+          <button onClick={filterPropertiesForRent}>Rent & Buy</button>
         </div>
       </div>
     </div>
