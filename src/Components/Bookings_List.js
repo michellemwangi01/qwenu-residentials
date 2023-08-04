@@ -46,7 +46,7 @@ const Bookings__List = () => {
       {/* <table className=" striped-table table-responsive table table-hover"> */}
 
       <h1>Property Bookings</h1>
-      <table className="table-responsive">
+      <table className="table-responsive bookingDetails">
         <thead className="thead-dark">
           <tr>
             <td>Property ID</td>
