@@ -122,12 +122,17 @@ small {
   width: 40%;
 }
 #listingDetailsComponent {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
+  display: flex;
+  flex: 600px 1;
+  /* grid-template-columns: 2fr 1fr; */
   justify-content: space-between;
   align-items: center;
-  margin: auto;
+  margin: 1rem auto;
   width: 90%;
+  min-height: 40rem;
+}
+#routerComponent {
+  height: auto;
 }
 .navBarComponent {
   display: flex;
@@ -280,7 +285,7 @@ a {
   height: 40rem;
 }
 .listingDetailsHeader p {
-  padding-top: 2rem;
+  padding-top: 4em;
   text-align: center;
   font-family: "Dancing Script";
   font-size: 20rem;
@@ -288,7 +293,11 @@ a {
   font-size: 2rem;
 }
 #bookingDetailsContainer {
+  display: flex;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
+  margin: 1rem auto;
 }
 .listingDetailsContainer {
   width: 90%;
@@ -296,7 +305,8 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: auto;
+  margin: 20px auto;
+  height: auto;
 }
 .listingsContainer {
   margin-top: 2rem;

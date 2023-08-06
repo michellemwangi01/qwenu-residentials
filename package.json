@@ -1,5 +1,4 @@
 {
-  "homepage": "https://michellemwangi01.github.io/qwenu-residentials/",
   "name": "qwenu_apartments",
   "version": "0.1.0",
   "private": true,
@@ -20,8 +19,6 @@
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "build": "react-scripts build && cp build/index.html build/404.html",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
