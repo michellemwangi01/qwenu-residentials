@@ -7,12 +7,12 @@ import Bookings__List from "./Bookings_List";
 import Error404 from "./Error404";
 const RouterComponent = () => {
   return (
-    <div>
+    <div id="routerComponent">
       <Routes>
         <Route exact path="qwenu-residentials" element={<Qwetu_Home />} />
-        <Route path="/homeListings/" element={<Listings />} />
-        <Route path="/homeListings/:externalID" element={<Listing_Details />} />
-        <Route path="/bookings/" element={<Bookings__List />} />
+        <Route path="homeListings" element={<Listings />} />
+        <Route path="homeListings/:externalID" element={<Listing_Details />} />
+        <Route path="bookings" element={<Bookings__List />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
     </div>

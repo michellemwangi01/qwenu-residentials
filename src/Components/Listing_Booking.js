@@ -55,7 +55,7 @@ const Listing_Booking = ({ propertyLocation, propertyTitle, propertyID }) => {
     toast(
       `Your booking has been made successfully! Please wait as you are redirected...`,
       {
-        type: "sucsess",
+        type: "success",
       }
     );
   return (

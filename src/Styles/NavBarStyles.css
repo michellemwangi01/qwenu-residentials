@@ -10,6 +10,7 @@
 }
 #navLinksContainer {
   display: flex;
+  flex-direction: row;
   justify-content: flex-end;
 }
 
@@ -121,22 +122,39 @@ small {
   width: 40%;
 }
 #listingDetailsComponent {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
+  display: flex;
+  flex: 600px 1;
+  /* grid-template-columns: 2fr 1fr; */
   justify-content: space-between;
   align-items: center;
-  margin: auto;
+  margin: 1rem auto;
   width: 90%;
+  min-height: 40rem;
 }
-.navBarComponent div {
+#routerComponent {
+  height: auto;
+}
+.navBarComponent {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
   width: 80%;
   margin: auto;
 }
+#navLinksContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+}
+#navLinksContainer li {
+  list-style: none;
+  margin-top: 20px;
+}
 .navBarComponent {
-  padding: 0.2rem;
+  padding: 2rem;
+  width: 100%;
   background-color: rgba(12, 25, 104, 0.9);
 
   color: whitesmoke;
@@ -146,8 +164,12 @@ small {
   display: flex;
   align-items: flex-end;
 }
-
 .navLinks a {
+  padding: 0.9rem;
+  border-radius: 10px;
+}
+
+.navLinks li {
   margin-top: 20px;
   list-style: none;
   color: white;
@@ -201,6 +223,25 @@ a {
   top: 30%;
   left: 10%;
 }
+.componentContainer {
+  overflow-x: auto;
+}
+.bookingDetails {
+  width: 100%;
+  table-layout: auto;
+  /* display: flex;
+  flex-direction: column;
+  overflow-x: auto; */
+}
+@media screen and (max-width: 768px) {
+  .bookingDetails {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+  td:nth-child(2) {
+    display: none;
+  }
+}
+
 #landingPageContent h4 {
   font-family: "Dancing Script";
   font-size: 2.5rem;
@@ -244,7 +285,7 @@ a {
   height: 40rem;
 }
 .listingDetailsHeader p {
-  padding-top: 2rem;
+  padding-top: 4em;
   text-align: center;
   font-family: "Dancing Script";
   font-size: 20rem;
@@ -252,7 +293,11 @@ a {
   font-size: 2rem;
 }
 #bookingDetailsContainer {
+  display: flex;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
+  margin: 1rem auto;
 }
 .listingDetailsContainer {
   width: 90%;
@@ -260,7 +305,8 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: auto;
+  margin: 20px auto;
+  height: auto;
 }
 .listingsContainer {
   margin-top: 2rem;
