@@ -30,7 +30,7 @@ const NavBar = () => {
 
       <ul id="navLinksContainer">
         <li className="navLinks">
-          <NavLink exact to="qwenu-residentials">
+          <NavLink exact to="/">
             Home
           </NavLink>
         </li>
