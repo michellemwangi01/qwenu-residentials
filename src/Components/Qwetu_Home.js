@@ -8,7 +8,6 @@ const Listings_Home = () => {
   return (
     <div className="listingsHome">
       <LandingPage />
-     
     </div>
   );
 };

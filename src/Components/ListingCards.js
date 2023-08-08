@@ -85,7 +85,10 @@ const ListingCards = ({ home }) => {
         </div>
       </ul>
       <div class="card-body">
-        <Link to={`/homeListings/${home.externalID}`} class="btn btn-primary">
+        <Link
+          to={`/homeListings/${home.externalID}`}
+          class="btn btn-primary seeHomeDetails"
+        >
           See Home Details
         </Link>
       </div>

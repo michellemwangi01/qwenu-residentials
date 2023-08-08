@@ -18,6 +18,7 @@ const FetchAPIData = ({ children }) => {
       .then((res) => res.json())
       .then((data) => setListingsData(data));
   }, []);
+
   console.log(listingsData);
 
   useEffect(() => {
@@ -32,6 +33,7 @@ const FetchAPIData = ({ children }) => {
     setBookingsData,
     setListingsData,
   };
+
 
   return (
     <div>

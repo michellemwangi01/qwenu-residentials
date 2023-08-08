@@ -112,6 +112,13 @@ const Listing_Details = () => {
             Embark on Your Journey to the perfect Abode. Make your booking here!
           </p>
         </div>
+        {bookingFormVisible && (
+          <Listing_Booking
+            propertyID={currentProperty.id}
+            propertyTitle={currentProperty.title}
+            propertyLocation={`${currentProperty.location[2].name}-${currentProperty.location[2].name}`}
+          />
+        )}{" "}
         <button
           onClick={formTogglerHandler}
           className={`btn btn-primary ${bookedItem ? "disabled-btn-book" : ""}`}
@@ -120,13 +127,6 @@ const Listing_Details = () => {
         >
           {addTransactionBtnText}
         </button>
-        {bookingFormVisible && (
-          <Listing_Booking
-            propertyID={currentProperty.id}
-            propertyTitle={currentProperty.title}
-            propertyLocation={`${currentProperty.location[2].name}-${currentProperty.location[2].name}`}
-          />
-        )}{" "}
       </div>
     </div>
   );
