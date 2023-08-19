@@ -34,7 +34,7 @@ const ListingCards = ({ home }) => {
           class="list-group-item"
           style={{ borderBottom: "1px solid", color: "blue", fontSize: "25px" }}
         >
-          $ {home.price}
+          ${home.price}
         </li>
         <div
           style={{
