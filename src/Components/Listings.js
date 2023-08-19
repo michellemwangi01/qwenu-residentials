@@ -1,20 +1,14 @@
 import { useState, useEffect, useContext } from "react";
-import ListingCards from "./ListingCards";
 import { listingsDataContext } from "./FetchAPIData";
+import ListingCards from "./ListingCards";
 import Listings_Search from "./Listings_Search";
-import { Router, Routes, Route, Outlet, useLocation } from "react-router-dom";
-
-import Listing_Booking from "./Listing_Booking";
 import FilterNav from "./FilterNav";
+import { Waveform } from "@uiball/loaders";
 
 function Listings() {
-  const [dataLoaded, setDataLoaded] = useState(false);
   const [showFilterNav, setShowFilterNav] = useState(false);
-  const { listingsData, setListingsData } = useContext(listingsDataContext);
-
-  if (!listingsData) {
-    return <h1 className="dataLoadingText">data loading...</h1>;
-  }
+  const { listingsData } = useContext(listingsDataContext);
+  console.log(listingsData);
 
   const homesList = listingsData.map((home) => (
     <ListingCards key={home.id} home={home} />
@@ -31,7 +25,6 @@ function Listings() {
           {showFilterNav && (
             <FilterNav showModal={showFilterNav} onClose={toggleFilterNav} />
           )}
-
           <h1 id="listingsContainerTitle">Explore Fine Living in the UAE</h1>
           <div>
             {/* Filter Modal */}
@@ -46,11 +39,13 @@ function Listings() {
               <Listings_Search />
             </div>
           </div>
-
-          {listingsData ? (
-            <div className="listingsContainer">{homesList}</div>
+          {listingsData.length == 0 ? (
+            <div id="loadersContainer">
+              <p>Loading...</p>
+              <Waveform size={40} lineWeight={3.5} speed={1} color="black" />
+            </div>
           ) : (
-            <h1>Data Loading...Please be patient</h1>
+            <div className="listingsContainer">{homesList}</div>
           )}
         </div>
       </div>
